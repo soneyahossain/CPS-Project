@@ -2,7 +2,6 @@
 We tested 21 CPS Python Project using Bandit static tool that finds common security issues in Pyhthon code. We tested below projects:
 
 1. Self-driving-car steering model  
-
 GitHub Link: https://udacity.com/self-driving-car   
 
  
@@ -37,16 +36,16 @@ GitHub Link: https://github.com/Python-IoT/Smart-IoT-Planting-System
 GitHub Link: https://github.com/Azure/azure-iot-sdk-python  
 
 
-10. Self-driving car simulation
-GitHub Link: https://github.com/hccoffin/Self-Driving-Car-Simulation\
+10. Self-driving car simulation  
+GitHub Link: https://github.com/hccoffin/Self-Driving-Car-Simulation  
 
 
-11. Drone-shipping
-GitHub Link: https://github.com/galprz/Drone-shipping  
+11. Drone-shipping  
+GitHub Link: https://github.com/galprz/Drone-shipping    
 
 
-12. AirSim
-GitHub Link: https://github.com/microsoft/AirSim  
+12. AirSim  
+GitHub Link: https://github.com/microsoft/AirSim   
 
 
 13. Autonomous\_UAVs\_Swarm\_Mission  
@@ -64,5 +63,4 @@ GitHub Link: https://github.com/AtsushiSakai/PythonRobotics
 
 
 17. PyAdvancedControl    
-
 GitHub Link: https://github.com/AtsushiSakai/PyAdvancedControl  

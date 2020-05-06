@@ -1,0 +1,808 @@
+Run started:2020-04-27 15:53:54.412612
+
+Test results:
+>> Issue: [B404:blacklist] Consider possible security implications associated with subprocess module.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/docs/source/conf.py:15
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b404-import-subprocess
+14	import sys
+15	import subprocess
+16	
+17	sys.path.insert(0, os.path.abspath('..'))
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/docs/source/conf.py:50
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b603_subprocess_without_shell_equals_true.html
+49	    print('module_path {}'.format(module_path))
+50	    subprocess.check_call(
+51	        [apidoc_command_path, '-f', '-e'] +
+52	        ['-o', output_path] +
+53	        [module_path] +
+54	        [os.path.join(module_path, p) for p in exclude_patterns])
+55	
+
+--------------------------------------------------
+>> Issue: [B404:blacklist] Consider possible security implications associated with subprocess module.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/_version.py:16
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b404-import-subprocess
+15	import re
+16	import subprocess
+17	import sys
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/_version.py:73
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+72	    """Call the given command(s)."""
+73	    assert isinstance(commands, list)
+74	    p = None
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/_version.py:79
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b603_subprocess_without_shell_equals_true.html
+78	            # remember shell=False, so use git.cmd on windows, not just git
+79	            p = subprocess.Popen([c] + args, cwd=cwd, env=env,
+80	                                 stdout=subprocess.PIPE,
+81	                                 stderr=(subprocess.PIPE if hide_stderr
+82	                                         else None))
+83	            break
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/data/csv_saver.py:38
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+37	        self._cache_dict = OrderedDict()
+38	        assert isinstance(filename, str) and filename[-4:] == '.csv', 'filename must be a string with CSV format.'
+39	        self._filepath = os.path.join(output_dir, filename)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/data/nifti_writer.py:79
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+78	    """
+79	    assert isinstance(data, np.ndarray), 'input data must be numpy array.'
+80	    sr = min(data.ndim, 3)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/data/sliding_window_inference.py:34
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+33	    num_spatial_dims = len(inputs.shape) - 2
+34	    assert len(roi_size) == num_spatial_dims, 'roi_size {} does not match input dims.'.format(roi_size)
+35	
+36	    # determine image spatial size and batch size
+37	    # Note: all input images must have the same image size and batch size
+38	    image_size = list(inputs.shape[2:])
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/data/sliding_window_inference.py:106
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+105	def _get_scan_interval(image_size, roi_size, num_spatial_dims):
+106	    assert (len(image_size) == num_spatial_dims), 'image coord different from spatial dims.'
+107	    assert (len(roi_size) == num_spatial_dims), 'roi coord different from spatial dims.'
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/data/sliding_window_inference.py:107
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+106	    assert (len(image_size) == num_spatial_dims), 'image coord different from spatial dims.'
+107	    assert (len(roi_size) == num_spatial_dims), 'roi coord different from spatial dims.'
+108	
+109	    scan_interval = [1 for _ in range(num_spatial_dims)]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/data/synthetic.py:45
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+44	    if channel_dim is not None:
+45	        assert isinstance(channel_dim, int) and channel_dim in (-1, 0, 2), 'invalid channel dim.'
+46	        noisyimage, labels = noisyimage[None], labels[None] \
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/data/synthetic.py:81
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+80	    if channel_dim is not None:
+81	        assert isinstance(channel_dim, int) and channel_dim in (-1, 0, 3), 'invalid channel dim.'
+82	        noisyimage, labels = (noisyimage[None], labels[None]) \
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/handlers/checkpoint_loader.py:32
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+31	    def __init__(self, load_path, load_dict):
+32	        assert load_path is not None, 'must provide clear path to load checkpoint.'
+33	        self.load_path = load_path
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/handlers/checkpoint_loader.py:34
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+33	        self.load_path = load_path
+34	        assert load_dict is not None and len(load_dict) > 0, 'must provide target objects to load.'
+35	        self.load_dict = load_dict
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/handlers/mean_dice.py:68
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+67	    def update(self, output: Sequence[Union[torch.Tensor, dict]]):
+68	        assert len(output) == 2, 'MeanDice metric can only support y_pred and y.'
+69	        y_pred, y = output
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/losses/dice.py:88
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+87	                pred = pred[:, 1:]
+88	                assert ground.shape == pred.shape, ('ground truth one-hot has differing shape (%r) from pred (%r)' %
+89	                                                    (ground.shape, pred.shape))
+90	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/losses/dice.py:180
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+179	                pred = pred[:, 1:]
+180	                assert ground.shape == pred.shape, ('ground truth one-hot has differing shape (%r) from pred (%r)' %
+181	                                                    (ground.shape, pred.shape))
+182	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/metrics/meandice.py:85
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+84	
+85	    assert y.shape == y_pred.shape, ("Ground truth one-hot has differing shape (%r) from source (%r)" %
+86	                                     (y.shape, y_pred.shape))
+87	
+88	    # reducing only spatial dimensions (not batch nor channels)
+89	    reduce_axis = list(range(2, n_len))
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/metrics/rocauc.py:19
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+18	def _calculate(y, y_pred):
+19	    assert y.ndimension() == y_pred.ndimension() == 1 and len(y) == len(y_pred), \
+20	        'y and y_pred must be 1 dimension data with same length.'
+21	    assert y.unique().equal(torch.tensor([0, 1], dtype=y.dtype, device=y.device)), \
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/metrics/rocauc.py:21
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+20	        'y and y_pred must be 1 dimension data with same length.'
+21	    assert y.unique().equal(torch.tensor([0, 1], dtype=y.dtype, device=y.device)), \
+22	        'y values must be 0 or 1, can not be all 0 or all 1.'
+23	    n = len(y)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/metrics/rocauc.py:102
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+101	
+102	        assert y.shape == y_pred.shape, 'data shapes of y_pred and y do not match.'
+103	
+104	        if average == 'micro':
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/networks/nets/unet.py:28
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+27	        super().__init__()
+28	        assert len(channels) == (len(strides) + 1)
+29	        self.dimensions = dimensions
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/networks/utils.py:32
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+31	    if num_dims > 1:
+32	        assert labels.shape[1] == 1, 'labels should have a channel with length equals to one.'
+33	        labels = torch.squeeze(labels, 1)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/composables.py:171
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+170	            data = self.loader(d[key])
+171	            assert isinstance(data, (tuple, list)), 'loader must return a tuple or list.'
+172	            d[key] = data[0]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/composables.py:173
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+172	            d[key] = data[0]
+173	            assert isinstance(data[1], dict), 'metadata must be a dict.'
+174	            for k in sorted(data[1]):
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/composables.py:507
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+506	        self.offsets = (-offsets, offsets) if not isinstance(offsets, (list, tuple)) else offsets
+507	        assert len(self.offsets) == 2, 'offsets should be a number or pair of numbers.'
+508	        self.prob = prob
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/composables.py:571
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+570	        self.factors = (-factors, factors) if not isinstance(factors, (list, tuple)) else factors
+571	        assert len(self.factors) == 2, 'factors should be a number or pair of numbers.'
+572	        self.prob = prob
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/composables.py:707
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+706	        if not isinstance(gamma, (tuple, list)):
+707	            assert gamma > 0.5, \
+708	                'if gamma is single number, must greater than 0.5 and value is picked from (0.5, gamma)'
+709	            self.gamma = (0.5, gamma)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/composables.py:712
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+711	            self.gamma = gamma
+712	        assert len(self.gamma) == 2, 'gamma should be a number or pair of numbers.'
+713	
+714	        self._do_transform = False
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/composables.py:913
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+912	        super().__init__(keys)
+913	        assert isinstance(label_key, str), 'label_key must be a string.'
+914	        assert isinstance(size, (list, tuple)), 'size must be list or tuple.'
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/composables.py:914
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+913	        assert isinstance(label_key, str), 'label_key must be a string.'
+914	        assert isinstance(size, (list, tuple)), 'size must be list or tuple.'
+915	        assert all(isinstance(x, int) and x > 0 for x in size), 'all elements of size must be positive integers.'
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/composables.py:915
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+914	        assert isinstance(size, (list, tuple)), 'size must be list or tuple.'
+915	        assert all(isinstance(x, int) and x > 0 for x in size), 'all elements of size must be positive integers.'
+916	        assert float(pos) >= 0 and float(neg) >= 0, "pos and neg must be greater than or equal to 0."
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/composables.py:916
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+915	        assert all(isinstance(x, int) and x > 0 for x in size), 'all elements of size must be positive integers.'
+916	        assert float(pos) >= 0 and float(neg) >= 0, "pos and neg must be greater than or equal to 0."
+917	        assert float(pos) + float(neg) > 0, "pos and neg cannot both be 0."
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/composables.py:917
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+916	        assert float(pos) >= 0 and float(neg) >= 0, "pos and neg must be greater than or equal to 0."
+917	        assert float(pos) + float(neg) > 0, "pos and neg cannot both be 0."
+918	        assert isinstance(num_samples, int), \
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/composables.py:918
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+917	        assert float(pos) + float(neg) > 0, "pos and neg cannot both be 0."
+918	        assert isinstance(num_samples, int), \
+919	            "invalid samples number: {}. num_samples must be an integer.".format(num_samples)
+920	        assert num_samples >= 0, 'num_samples must be greater than or equal to 0.'
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/composables.py:920
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+919	            "invalid samples number: {}. num_samples must be an integer.".format(num_samples)
+920	        assert num_samples >= 0, 'num_samples must be greater than or equal to 0.'
+921	        self.label_key = label_key
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/composables.py:1282
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+1281	            self.degrees = (-self.degrees, self.degrees)
+1282	        assert len(self.degrees) == 2, 'degrees should be a number or pair of numbers.'
+1283	
+1284	        self._do_transform = False
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/composables.py:1358
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+1357	           hasattr(max_zoom, '__iter__'):
+1358	            assert len(min_zoom) == len(max_zoom), 'min_zoom and max_zoom must have same length.'
+1359	        self.min_zoom = min_zoom
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/transforms.py:241
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+240	            else:
+241	                assert np.allclose(header['affine'], compatible_meta['affine']), \
+242	                    'affine data of all images should be same.'
+243	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/transforms.py:296
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+295	    def __init__(self, channel_dim=-1):
+296	        assert isinstance(channel_dim, int) and channel_dim >= -1, 'invalid channel dimension.'
+297	        self.channel_dim = channel_dim
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/transforms.py:319
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+318	    def __init__(self, channel_dim=0):
+319	        assert isinstance(channel_dim, int) and channel_dim >= -1, 'invalid channel dimension.'
+320	        self.channel_dim = channel_dim
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/transforms.py:355
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+354	    def __init__(self, repeats):
+355	        assert repeats > 0, 'repeats count must be greater than 0.'
+356	        self.repeats = repeats
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/transforms.py:375
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+374	    def __call__(self, img):
+375	        assert isinstance(img, np.ndarray), 'image must be numpy array.'
+376	        return img.astype(self.dtype)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/transforms.py:474
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+473	                 clip=True, preserve_range=True, anti_aliasing=True, anti_aliasing_sigma=None):
+474	        assert isinstance(order, int), "order must be integer."
+475	        self.spatial_size = spatial_size
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/transforms.py:560
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+559	    def __init__(self, zoom, order=3, mode='constant', cval=0, prefilter=True, use_gpu=False, keep_size=False):
+560	        assert isinstance(order, int), "Order must be integer."
+561	        self.zoom = zoom
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/transforms.py:650
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+649	        self.offsets = (-offsets, offsets) if not isinstance(offsets, (list, tuple)) else offsets
+650	        assert len(self.offsets) == 2, 'offsets should be a number or pair of numbers.'
+651	        self.prob = prob
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/transforms.py:707
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+706	        self.factors = (-factors, factors) if not isinstance(factors, (list, tuple)) else factors
+707	        assert len(self.factors) == 2, 'factors should be a number or pair of numbers.'
+708	        self.prob = prob
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/transforms.py:741
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+740	        if subtrahend is not None or divisor is not None:
+741	            assert isinstance(subtrahend, np.ndarray) and isinstance(divisor, np.ndarray), \
+742	                'subtrahend and divisor must be set in pair and in numpy array.'
+743	        self.subtrahend = subtrahend
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/transforms.py:778
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+777	    def __init__(self, threshold, above=True, cval=0):
+778	        assert isinstance(threshold, (float, int)), 'must set the threshold to filter intensity.'
+779	        self.threshold = threshold
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/transforms.py:824
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+823	    def __init__(self, gamma):
+824	        assert isinstance(gamma, (float, int)), 'gamma must be a float or int number.'
+825	        self.gamma = gamma
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/transforms.py:847
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+846	        if not isinstance(gamma, (tuple, list)):
+847	            assert gamma > 0.5, \
+848	                'if gamma is single number, must greater than 0.5 and value is picked from (0.5, gamma)'
+849	            self.gamma = (0.5, gamma)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/transforms.py:852
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+851	            self.gamma = gamma
+852	        assert len(self.gamma) == 2, 'gamma should be a number or pair of numbers.'
+853	
+854	        self._do_transform = False
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/transforms.py:946
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+945	    def __init__(self, spatial_size, method='symmetric', mode='constant'):
+946	        assert isinstance(spatial_size, (list, tuple)), 'spatial_out_size must be list or tuple.'
+947	        self.spatial_size = spatial_size
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/transforms.py:948
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+947	        self.spatial_size = spatial_size
+948	        assert method in ('symmetric', 'end'), 'unsupported padding type.'
+949	        self.method = method
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/transforms.py:950
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+949	        self.method = method
+950	        assert isinstance(mode, str), 'mode must be str.'
+951	        self.mode = mode
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/transforms.py:993
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+992	        else:
+993	            assert roi_start is not None and roi_end is not None, 'roi_start and roi_end must be provided.'
+994	            self.roi_start = np.asarray(roi_start, dtype=np.uint16)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/transforms.py:997
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+996	
+997	        assert np.all(self.roi_start >= 0), 'all elements of roi_start must be greater than or equal to 0.'
+998	        assert np.all(self.roi_end > 0), 'all elements of roi_end must be positive.'
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/transforms.py:998
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+997	        assert np.all(self.roi_start >= 0), 'all elements of roi_start must be greater than or equal to 0.'
+998	        assert np.all(self.roi_end > 0), 'all elements of roi_end must be positive.'
+999	        assert np.all(self.roi_end >= self.roi_start), 'invalid roi range.'
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/transforms.py:999
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+998	        assert np.all(self.roi_end > 0), 'all elements of roi_end must be positive.'
+999	        assert np.all(self.roi_end >= self.roi_start), 'invalid roi range.'
+1000	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/transforms.py:1004
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+1003	        sd = min(len(self.roi_start), len(max_end))
+1004	        assert np.all(max_end[:sd] >= self.roi_start[:sd]), 'roi start out of image space.'
+1005	        assert np.all(max_end[:sd] >= self.roi_end[:sd]), 'roi end out of image space.'
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/transforms.py:1005
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+1004	        assert np.all(max_end[:sd] >= self.roi_start[:sd]), 'roi start out of image space.'
+1005	        assert np.all(max_end[:sd] >= self.roi_end[:sd]), 'roi end out of image space.'
+1006	
+1007	        slices = [slice(None)] + [slice(s, e) for s, e in zip(self.roi_start[:sd], self.roi_end[:sd])]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/transforms.py:1138
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+1137	            self.degrees = (-self.degrees, self.degrees)
+1138	        assert len(self.degrees) == 2, 'degrees should be a number or pair of numbers.'
+1139	
+1140	        self._do_transform = False
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/transforms.py:1205
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+1204	        if hasattr(min_zoom, '__iter__') and hasattr(max_zoom, '__iter__'):
+1205	            assert len(min_zoom) == len(max_zoom), 'min_zoom and max_zoom must have same length.'
+1206	        self.min_zoom = min_zoom
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/transforms.py:1755
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+1754	        if dim is not None:
+1755	            assert isinstance(dim, int) and dim >= -1, 'invalid channel dimension.'
+1756	        self.dim = dim
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/utils.py:22
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+21	    """Returns True if a randomly chosen number is less than or equal to `prob`, by default this is a 50/50 chance."""
+22	    return random.random() <= prob
+23	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/utils.py:179
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+178	    max_size = label.shape[1:]
+179	    assert len(max_size) == len(size), 'expected size does not match label dim.'
+180	    assert (np.subtract(max_size, size) >= 0).all(), 'proposed roi is larger than image itself.'
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/utils.py:180
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+179	    assert len(max_size) == len(size), 'expected size does not match label dim.'
+180	    assert (np.subtract(max_size, size) >= 0).all(), 'proposed roi is larger than image itself.'
+181	
+182	    # Select subregion to assure valid roi
+183	    valid_start = np.floor_divide(size, 2)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/utils.py:390
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+389	    """
+390	    assert isinstance(margin, int), 'margin must be int type.'
+391	    data = img[[*(ensure_tuple(channel_indexes))]] if channel_indexes is not None else img
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/transforms/utils.py:398
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+397	    for i in range(data.ndim):
+398	        assert len(nonzero_idx[i]) > 0, 'did not find nonzero index at spatial dim {}'.format(i)
+399	        box_start.append(max(0, np.min(nonzero_idx[i]) - margin))
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/utils/aliases.py:55
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+54	
+55	    assert name not in GlobalAliases or obj is not None
+56	
+57	    # attempt to resolve a qualified name
+58	    if obj is None and "." in name:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/monai/visualize/img2tensorboard.py:146
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+145	    """
+146	    assert isinstance(writer, SummaryWriter) is True, 'must provide a TensorBoard SummaryWriter.'
+147	    d = data[index]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/tests/test_flipd.py:44
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+43	        res = flip({'img': self.imt[0]})
+44	        assert np.allclose(expected, res['img'])
+45	
+
+--------------------------------------------------
+>> Issue: [B404:blacklist] Consider possible security implications associated with subprocess module.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/tests/test_integration_classification_2d.py:14
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b404-import-subprocess
+13	import shutil
+14	import subprocess
+15	import tarfile
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/tests/test_integration_classification_2d.py:167
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b607_start_process_with_partial_path.html
+166	        # download
+167	        subprocess.call(['wget', '-nv', '-P', self.data_dir, TEST_DATA_URL])
+168	        dataset_file = os.path.join(self.data_dir, 'MedNIST.tar.gz')
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/tests/test_integration_classification_2d.py:167
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b603_subprocess_without_shell_equals_true.html
+166	        # download
+167	        subprocess.call(['wget', '-nv', '-P', self.data_dir, TEST_DATA_URL])
+168	        dataset_file = os.path.join(self.data_dir, 'MedNIST.tar.gz')
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/tests/test_integration_classification_2d.py:169
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+168	        dataset_file = os.path.join(self.data_dir, 'MedNIST.tar.gz')
+169	        assert os.path.exists(dataset_file)
+170	
+171	        # extract tarfile
+172	        datafile = tarfile.open(dataset_file)
+
+--------------------------------------------------
+>> Issue: [B404:blacklist] Consider possible security implications associated with subprocess module.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/versioneer.py:288
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b404-import-subprocess
+287	import re
+288	import subprocess
+289	import sys
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/versioneer.py:387
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+386	    """Call the given command(s)."""
+387	    assert isinstance(commands, list)
+388	    p = None
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/versioneer.py:393
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b603_subprocess_without_shell_equals_true.html
+392	            # remember shell=False, so use git.cmd on windows, not just git
+393	            p = subprocess.Popen([c] + args, cwd=cwd, env=env,
+394	                                 stdout=subprocess.PIPE,
+395	                                 stderr=(subprocess.PIPE if hide_stderr
+396	                                         else None))
+397	            break
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/versioneer.py:1414
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+1413	
+1414	    assert cfg.VCS is not None, "please set [versioneer]VCS= in setup.cfg"
+1415	    handlers = HANDLERS.get(cfg.VCS)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/versioneer.py:1416
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+1415	    handlers = HANDLERS.get(cfg.VCS)
+1416	    assert handlers, "unrecognized VCS '%s'" % cfg.VCS
+1417	    verbose = verbose or cfg.verbose
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/versioneer.py:1418
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+1417	    verbose = verbose or cfg.verbose
+1418	    assert cfg.versionfile_source is not None, \
+1419	        "please set versioneer.versionfile_source"
+1420	    assert cfg.tag_prefix is not None, "please set versioneer.tag_prefix"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/MONAI/versioneer.py:1420
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+1419	        "please set versioneer.versionfile_source"
+1420	    assert cfg.tag_prefix is not None, "please set versioneer.tag_prefix"
+1421	
+1422	    versionfile_abs = os.path.join(root, cfg.versionfile_source)
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 15481
+	Total lines skipped (#nosec): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0.0
+		Low: 83.0
+		Medium: 0.0
+		High: 0.0
+	Total issues (by confidence):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 0.0
+		High: 83.0
+Files skipped (0):

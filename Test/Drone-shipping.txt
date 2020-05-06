@@ -1,0 +1,44 @@
+Run started:2020-04-26 19:27:13.426465
+
+Test results:
+>> Issue: [B104:hardcoded_bind_all_interfaces] Possible binding to all interfaces.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/Drone-shipping/common/python/cmd_server.py:23
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b104_hardcoded_bind_all_interfaces.html
+22	
+23	    def __init__(self,host="0.0.0.0",port=3128):
+24	        WebsocketServer.__init__(self,port=port,host=host)
+
+--------------------------------------------------
+>> Issue: [B104:hardcoded_bind_all_interfaces] Possible binding to all interfaces.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/Drone-shipping/common/python/udp_receiver.py:5
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b104_hardcoded_bind_all_interfaces.html
+4	class UdpReceiver:
+5	    def __init__(self, port=1234, host="0.0.0.0", buffer_size=8192):
+6	        self.__handlers = []
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 738
+	Total lines skipped (#nosec): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 2.0
+		High: 0.0
+	Total issues (by confidence):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 2.0
+		High: 0.0
+Files skipped (6):
+	/Users/soneyabintahossain/cps_project_test/Drone-shipping/common/python/logger.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/Drone-shipping/ground/communication_channel.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/Drone-shipping/sanity_tests/connection/cmd_client_test.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/Drone-shipping/sanity_tests/connection/cmd_server_test.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/Drone-shipping/sanity_tests/connection/udp_receiver_test.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/Drone-shipping/vehicle/python/mission_executer.py (syntax error while parsing AST from file)

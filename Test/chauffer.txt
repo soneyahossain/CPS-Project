@@ -1,0 +1,370 @@
+Run started:2020-04-27 15:36:14.034494
+
+Test results:
+>> Issue: [B403:blacklist] Consider possible security implications associated with pickle module.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/datasets.py:7
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b403-import-pickle
+6	import os
+7	import pickle
+8	import shutil
+
+--------------------------------------------------
+>> Issue: [B404:blacklist] Consider possible security implications associated with subprocess module.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/datasets.py:9
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b404-import-subprocess
+8	import shutil
+9	import subprocess
+10	import threading
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/datasets.py:574
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+573	    """
+574	    assert(os.path.exists(dataset_path),
+575	           "dataset doesn't exist: " + dataset_path)
+576	
+577	    # Load the dataset from the local directory
+578	    labels = np.load(os.path.join(dataset_path, 'labels.npy'))
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/datasets.py:615
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+614	        validation_percent=0.1,
+615	        cache_dir='/tmp'):
+616	    """
+617	    Prepare dataset from nishanth's preprocessed format.
+618	
+619	    @param archive_url - url to download dataset archive from
+620	    @param local_output_path - where to write prepared dataset locally
+621	    @param output_s3_uri - where to write prepared dataset in s3
+622	    @param training_percent - percent of samples used in training set
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/datasets.py:647
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html
+646	        try: os.makedirs(local_raw_path)
+647	        except: pass
+648	
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/datasets.py:649
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b607_start_process_with_partial_path.html
+648	
+649	        subprocess.call(['tar', 'xf', archive_path, '-C', local_raw_path])
+650	
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/datasets.py:649
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b603_subprocess_without_shell_equals_true.html
+648	
+649	        subprocess.call(['tar', 'xf', archive_path, '-C', local_raw_path])
+650	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/datasets.py:652
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+651	    dir_list = list(os.listdir(local_raw_path))
+652	    assert len(dir_list) == 2
+653	    assert 'labels' in dir_list
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/datasets.py:653
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+652	    assert len(dir_list) == 2
+653	    assert 'labels' in dir_list
+654	
+655	    images_dirname, = [f for f in dir_list if f != 'labels']
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/datasets.py:716
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+715	    dir_list = list(os.listdir(local_raw_path))
+716	    assert len(dir_list) == 2
+717	    assert 'labels' in dir_list
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/datasets.py:717
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+716	    assert len(dir_list) == 2
+717	    assert 'labels' in dir_list
+718	
+719	    images_dirname, = [f for f in dir_list if f != 'labels']
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/datasets.py:757
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b607_start_process_with_partial_path.html
+756	        validation_indexes)
+757	    subprocess.call([
+758	        'ln', '-s',
+759	        os.path.join(local_raw_path, 'images'),
+760	        os.path.join(local_output_path, 'images')])
+761	
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/datasets.py:757
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b603_subprocess_without_shell_equals_true.html
+756	        validation_indexes)
+757	    subprocess.call([
+758	        'ln', '-s',
+759	        os.path.join(local_raw_path, 'images'),
+760	        os.path.join(local_output_path, 'images')])
+761	
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/datasets.py:774
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html
+773	    try: os.makedirs(images_path)
+774	    except: pass
+775	
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/datasets.py:857
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html
+856	    try: os.makedirs(local_output_path)
+857	    except: pass
+858	
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/datasets.py:859
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b607_start_process_with_partial_path.html
+858	
+859	    subprocess.call([
+860	        'ln', '-s',
+861	        os.path.join(src_path, 'images'),
+862	        os.path.join(local_output_path, 'images')])
+863	
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/datasets.py:859
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b603_subprocess_without_shell_equals_true.html
+858	
+859	    subprocess.call([
+860	        'ln', '-s',
+861	        os.path.join(src_path, 'images'),
+862	        os.path.join(local_output_path, 'images')])
+863	
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/datasets.py:928
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html
+927	    try: shutil.rmtree(output_path)
+928	    except: pass
+929	
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/datasets.py:932
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html
+931	    try: os.makedirs(images_path)
+932	    except: pass
+933	
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/datasets.py:955
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b607_start_process_with_partial_path.html
+954	        dest_path = os.path.join(images_path, '%s.png.npy' % out_img_index)
+955	        subprocess.check_call(['ln', '-s', src_path, dest_path])
+956	        new_labels[out_img_index - 1] = labels1[index - 1]
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/datasets.py:955
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b603_subprocess_without_shell_equals_true.html
+954	        dest_path = os.path.join(images_path, '%s.png.npy' % out_img_index)
+955	        subprocess.check_call(['ln', '-s', src_path, dest_path])
+956	        new_labels[out_img_index - 1] = labels1[index - 1]
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/datasets.py:962
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b607_start_process_with_partial_path.html
+961	        dest_path = os.path.join(images_path, '%s.png.npy' % out_img_index)
+962	        subprocess.check_call(['ln', '-s', src_path, dest_path])
+963	        new_labels[out_img_index - 1] = labels2[index - 1]
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/datasets.py:962
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b603_subprocess_without_shell_equals_true.html
+961	        dest_path = os.path.join(images_path, '%s.png.npy' % out_img_index)
+962	        subprocess.check_call(['ln', '-s', src_path, dest_path])
+963	        new_labels[out_img_index - 1] = labels2[index - 1]
+
+--------------------------------------------------
+>> Issue: [B404:blacklist] Consider possible security implications associated with subprocess module.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/util.py:1
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b404-import-subprocess
+1	import logging, os, subprocess, sys, tempfile, time
+2	
+3	logger = logging.getLogger(__name__)
+4	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/util.py:23
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+22	    """
+23	    assert s3_uri.startswith('s3://')
+24	    return s3_uri.split('s3://')[-1].split('/', 1)
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/util.py:35
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b607_start_process_with_partial_path.html
+34	    # use awscli for extra speed
+35	    subprocess.call(['aws', 's3', 'cp', local_file, s3_uri])
+36	
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/util.py:35
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b603_subprocess_without_shell_equals_true.html
+34	    # use awscli for extra speed
+35	    subprocess.call(['aws', 's3', 'cp', local_file, s3_uri])
+36	
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/util.py:49
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b607_start_process_with_partial_path.html
+48	    logger.info('Archiving %s for upload', local_path)
+49	    subprocess.call([
+50	        'tar',
+51	        'czf', archive_path,
+52	        '-C', local_path,
+53	        '.'])
+54	
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/util.py:49
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b603_subprocess_without_shell_equals_true.html
+48	    logger.info('Archiving %s for upload', local_path)
+49	    subprocess.call([
+50	        'tar',
+51	        'czf', archive_path,
+52	        '-C', local_path,
+53	        '.'])
+54	
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/util.py:71
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b607_start_process_with_partial_path.html
+70	    # use awscli for extra speed
+71	    subprocess.call(['aws', 's3', 'cp', s3_uri, out_path])
+72	
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/util.py:71
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b603_subprocess_without_shell_equals_true.html
+70	    # use awscli for extra speed
+71	    subprocess.call(['aws', 's3', 'cp', s3_uri, out_path])
+72	
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/util.py:96
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html
+95	    try: os.makedirs(local_path)
+96	    except: pass
+97	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/util.py:98
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+97	
+98	    assert s3_uri.endswith('.tar.gz')
+99	    _, tmp_path = tempfile.mkstemp()
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/util.py:105
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b607_start_process_with_partial_path.html
+104	        # use awscli for faster download
+105	        subprocess.call(['tar', 'xzf', tmp_path, '-C', local_path])
+106	
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/util.py:105
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b603_subprocess_without_shell_equals_true.html
+104	        # use awscli for faster download
+105	        subprocess.call(['tar', 'xzf', tmp_path, '-C', local_path])
+106	
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 2673
+	Total lines skipped (#nosec): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0.0
+		Low: 34.0
+		Medium: 1.0
+		High: 0.0
+	Total issues (by confidence):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 1.0
+		High: 34.0
+Files skipped (3):
+	/Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/models.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/submission.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/self-driving-car/steering-models/community-models/chauffeur/worker.py (syntax error while parsing AST from file)

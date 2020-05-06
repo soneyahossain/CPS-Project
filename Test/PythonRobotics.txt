@@ -1,0 +1,859 @@
+Run started:2020-04-26 20:19:42.269666
+
+Test results:
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/ArmNavigation/n_joint_arm_3d/random_forward_kinematics.py:11
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+10	def random_val(min_val, max_val):
+11	    return min_val + random.random() * (max_val - min_val)
+12	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/ArmNavigation/n_joint_arm_3d/random_inverse_kinematics.py:11
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+10	def random_val(min_val, max_val):
+11	    return min_val + random.random() * (max_val - min_val)
+12	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/ArmNavigation/n_joint_arm_to_point_control/n_joint_arm_to_point_control.py:81
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+80	    SAREA = 15.0
+81	    return [SAREA * random() - SAREA / 2.0,
+82	            SAREA * random() - SAREA / 2.0]
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/ArmNavigation/n_joint_arm_to_point_control/n_joint_arm_to_point_control.py:82
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+81	    return [SAREA * random() - SAREA / 2.0,
+82	            SAREA * random() - SAREA / 2.0]
+83	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/ArmNavigation/two_joint_arm_to_point_control/two_joint_arm_to_point_control.py:108
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+107	    for i in range(5):
+108	        x = 2.0 * random() - 1.0
+109	        y = 2.0 * random() - 1.0
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/ArmNavigation/two_joint_arm_to_point_control/two_joint_arm_to_point_control.py:109
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+108	        x = 2.0 * random() - 1.0
+109	        y = 2.0 * random() - 1.0
+110	        theta1, theta2 = two_joint_arm(
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/Mapping/circle_fitting/circle_fitting.py:60
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+59	        nangle = math.atan2(ny, nx)
+60	        nr = math.hypot(nx, ny) * random.uniform(0.95, 1.05)
+61	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/Mapping/kmeans_clustering/kmeans_clustering.py:44
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+43	        self.n_label = n_label
+44	        self.labels = [random.randint(0, n_label - 1)
+45	                       for _ in range(self.n_data)]
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/Mapping/kmeans_clustering/kmeans_clustering.py:90
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+89	        for _ in range(n_points):
+90	            rx.append(icx + rand_d * (random.random() - 0.5))
+91	            ry.append(icy + rand_d * (random.random() - 0.5))
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/Mapping/kmeans_clustering/kmeans_clustering.py:91
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+90	            rx.append(icx + rand_d * (random.random() - 0.5))
+91	            ry.append(icy + rand_d * (random.random() - 0.5))
+92	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/Mapping/rectangle_fitting/simulator.py:104
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+103	                vangle = math.atan2(vy, vx)
+104	                vr = np.hypot(vx, vy) * random.uniform(1.0 - self.range_noise,
+105	                                                       1.0 + self.range_noise)
+106	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/BatchInformedRRTStar/batch_informed_rrtstar.py:401
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+400	    def sample_unit_ball():
+401	        a = random.random()
+402	        b = random.random()
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/BatchInformedRRTStar/batch_informed_rrtstar.py:402
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+401	        a = random.random()
+402	        b = random.random()
+403	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/BatchInformedRRTStar/batch_informed_rrtstar.py:412
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+411	    def sample_free_space(self):
+412	        rnd = [random.uniform(self.minrand, self.maxrand),
+413	               random.uniform(self.minrand, self.maxrand)]
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/BatchInformedRRTStar/batch_informed_rrtstar.py:413
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+412	        rnd = [random.uniform(self.minrand, self.maxrand),
+413	               random.uniform(self.minrand, self.maxrand)]
+414	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/BezierPath/bezier_path.py:161
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+160	
+161	    assert path.T[0][0] == start_x, "path is invalid"
+162	    assert path.T[1][0] == start_y, "path is invalid"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/BezierPath/bezier_path.py:162
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+161	    assert path.T[0][0] == start_x, "path is invalid"
+162	    assert path.T[1][0] == start_y, "path is invalid"
+163	    assert path.T[0][-1] == end_x, "path is invalid"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/BezierPath/bezier_path.py:163
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+162	    assert path.T[1][0] == start_y, "path is invalid"
+163	    assert path.T[0][-1] == end_x, "path is invalid"
+164	    assert path.T[1][-1] == end_y, "path is invalid"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/BezierPath/bezier_path.py:164
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+163	    assert path.T[0][-1] == end_x, "path is invalid"
+164	    assert path.T[1][-1] == end_y, "path is invalid"
+165	
+166	    if show_animation:  # pragma: no cover
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/BezierPath/bezier_path.py:196
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+195	            start_x, start_y, start_yaw, end_x, end_y, end_yaw, offset)
+196	        assert path.T[0][0] == start_x, "path is invalid"
+197	        assert path.T[1][0] == start_y, "path is invalid"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/BezierPath/bezier_path.py:197
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+196	        assert path.T[0][0] == start_x, "path is invalid"
+197	        assert path.T[1][0] == start_y, "path is invalid"
+198	        assert path.T[0][-1] == end_x, "path is invalid"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/BezierPath/bezier_path.py:198
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+197	        assert path.T[1][0] == start_y, "path is invalid"
+198	        assert path.T[0][-1] == end_x, "path is invalid"
+199	        assert path.T[1][-1] == end_y, "path is invalid"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/BezierPath/bezier_path.py:199
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+198	        assert path.T[0][-1] == end_x, "path is invalid"
+199	        assert path.T[1][-1] == end_y, "path is invalid"
+200	
+201	        if show_animation:  # pragma: no cover
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/Eta3SplinePath/eta3_spline_path.py:33
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+32	        # ensure input has the correct form
+33	        assert(isinstance(segments, list) and isinstance(
+34	            segments[0], eta3_path_segment))
+35	        # ensure that each segment begins from the previous segment's end (continuity)
+36	        for r, s in zip(segments[:-1], segments[1:]):
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/Eta3SplinePath/eta3_spline_path.py:37
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+36	        for r, s in zip(segments[:-1], segments[1:]):
+37	            assert(np.array_equal(r.end_pose, s.start_pose))
+38	        self.segments = segments
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/Eta3SplinePath/eta3_spline_path.py:50
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+49	
+50	        assert(u >= 0 and u <= len(self.segments))
+51	        if np.isclose(u, len(self.segments)):
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/Eta3SplinePath/eta3_spline_path.py:75
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+74	        # make sure inputs are of the correct size
+75	        assert(len(start_pose) == 3 and len(start_pose) == len(end_pose))
+76	        self.start_pose = start_pose
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/Eta3SplinePath/eta3_spline_path.py:83
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+82	            # make sure that eta has correct size
+83	            assert(len(eta) == 6)
+84	        # if no kappa is passed, initialize to array of zeros
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/Eta3SplinePath/eta3_spline_path.py:88
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+87	        else:
+88	            assert(len(kappa) == 4)
+89	        # set up angle cosines and sines for simpler computations below
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/Eta3SplinePath/eta3_spline_path.py:171
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+170	        """
+171	        assert(u >= 0 and u <= 1)
+172	        return self.coeffs.dot(np.array([1, u, u**2, u**3, u**4, u**5, u**6, u**7]))
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/Eta3SplinePath/eta3_spline_path.py:184
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+183	
+184	        assert(u >= 0 and u <= 1)
+185	        assert(order > 0 and order <= 2)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/Eta3SplinePath/eta3_spline_path.py:185
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+184	        assert(u >= 0 and u <= 1)
+185	        assert(order > 0 and order <= 2)
+186	        if order == 1:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/Eta3SplineTrajectory/eta3_spline_trajectory.py:45
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+44	       # ensure that all inputs obey the assumptions of the model
+45	        assert max_vel > 0 and v0 >= 0 and a0 >= 0 and max_accel > 0 and max_jerk > 0 \
+46	            and a0 <= max_accel and v0 <= max_vel
+47	        super(eta3_trajectory, self).__init__(segments=segments)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/Eta3SplineTrajectory/eta3_spline_trajectory.py:170
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+169	        try:
+170	            assert np.isclose(self.vels[index], 0)
+171	        except AssertionError as e:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/Eta3SplineTrajectory/eta3_spline_trajectory.py:189
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+188	        # chosen cannot be enforced on the path
+189	        assert(np.all(self.times >= 0))
+190	        self.total_time = self.times.sum()
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/InformedRRTStar/informed_rrt_star.py:152
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+151	    def sample_unit_ball():
+152	        a = random.random()
+153	        b = random.random()
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/InformedRRTStar/informed_rrt_star.py:153
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+152	        a = random.random()
+153	        b = random.random()
+154	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/InformedRRTStar/informed_rrt_star.py:163
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+162	    def sample_free_space(self):
+163	        if random.randint(0, 100) > self.goal_sample_rate:
+164	            rnd = [random.uniform(self.min_rand, self.max_rand),
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/InformedRRTStar/informed_rrt_star.py:164
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+163	        if random.randint(0, 100) > self.goal_sample_rate:
+164	            rnd = [random.uniform(self.min_rand, self.max_rand),
+165	                   random.uniform(self.min_rand, self.max_rand)]
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/InformedRRTStar/informed_rrt_star.py:165
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+164	            rnd = [random.uniform(self.min_rand, self.max_rand),
+165	                   random.uniform(self.min_rand, self.max_rand)]
+166	        else:
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/LQRPlanner/LQRplanner.py:132
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+131	        sy = 6.0
+132	        gx = random.uniform(-area, area)
+133	        gy = random.uniform(-area, area)
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/LQRPlanner/LQRplanner.py:133
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+132	        gx = random.uniform(-area, area)
+133	        gy = random.uniform(-area, area)
+134	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/LQRRRTStar/lqr_rrt_star.py:151
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+150	
+151	        if random.randint(0, 100) > self.goal_sample_rate:
+152	            rnd = self.Node(random.uniform(self.min_rand, self.max_rand),
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/LQRRRTStar/lqr_rrt_star.py:152
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+151	        if random.randint(0, 100) > self.goal_sample_rate:
+152	            rnd = self.Node(random.uniform(self.min_rand, self.max_rand),
+153	                            random.uniform(self.min_rand, self.max_rand)
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/LQRRRTStar/lqr_rrt_star.py:153
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+152	            rnd = self.Node(random.uniform(self.min_rand, self.max_rand),
+153	                            random.uniform(self.min_rand, self.max_rand)
+154	                            )
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/ProbabilisticRoadMap/probabilistic_road_map.py:267
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+266	    while len(sample_x) <= N_SAMPLE:
+267	        tx = (random.random() * (maxx - minx)) + minx
+268	        ty = (random.random() * (maxy - miny)) + miny
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/ProbabilisticRoadMap/probabilistic_road_map.py:268
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+267	        tx = (random.random() * (maxx - minx)) + minx
+268	        ty = (random.random() * (maxy - miny)) + miny
+269	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/ProbabilisticRoadMap/probabilistic_road_map.py:325
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+324	
+325	    assert rx, 'Cannot found path'
+326	
+327	    if show_animation:
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/RRT/rrt.py:132
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+131	    def get_random_node(self):
+132	        if random.randint(0, 100) > self.goal_sample_rate:
+133	            rnd = self.Node(random.uniform(self.min_rand, self.max_rand),
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/RRT/rrt.py:133
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+132	        if random.randint(0, 100) > self.goal_sample_rate:
+133	            rnd = self.Node(random.uniform(self.min_rand, self.max_rand),
+134	                            random.uniform(self.min_rand, self.max_rand))
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/RRT/rrt.py:134
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+133	            rnd = self.Node(random.uniform(self.min_rand, self.max_rand),
+134	                            random.uniform(self.min_rand, self.max_rand))
+135	        else:  # goal point sampling
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/RRT/rrt_with_pathsmoothing.py:87
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+86	        # Sample two points
+87	        pickPoints = [random.uniform(0, le), random.uniform(0, le)]
+88	        pickPoints.sort()
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/RRT/rrt_with_pathsmoothing.py:87
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+86	        # Sample two points
+87	        pickPoints = [random.uniform(0, le), random.uniform(0, le)]
+88	        pickPoints.sort()
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/RRTDubins/rrt_dubins.py:166
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+165	
+166	        if random.randint(0, 100) > self.goal_sample_rate:
+167	            rnd = self.Node(random.uniform(self.min_rand, self.max_rand),
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/RRTDubins/rrt_dubins.py:167
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+166	        if random.randint(0, 100) > self.goal_sample_rate:
+167	            rnd = self.Node(random.uniform(self.min_rand, self.max_rand),
+168	                            random.uniform(self.min_rand, self.max_rand),
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/RRTDubins/rrt_dubins.py:168
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+167	            rnd = self.Node(random.uniform(self.min_rand, self.max_rand),
+168	                            random.uniform(self.min_rand, self.max_rand),
+169	                            random.uniform(-math.pi, math.pi)
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/RRTDubins/rrt_dubins.py:169
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+168	                            random.uniform(self.min_rand, self.max_rand),
+169	                            random.uniform(-math.pi, math.pi)
+170	                            )
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/RRTStarDubins/rrt_star_dubins.py:172
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+171	
+172	        if random.randint(0, 100) > self.goal_sample_rate:
+173	            rnd = self.Node(random.uniform(self.min_rand, self.max_rand),
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/RRTStarDubins/rrt_star_dubins.py:173
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+172	        if random.randint(0, 100) > self.goal_sample_rate:
+173	            rnd = self.Node(random.uniform(self.min_rand, self.max_rand),
+174	                            random.uniform(self.min_rand, self.max_rand),
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/RRTStarDubins/rrt_star_dubins.py:174
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+173	            rnd = self.Node(random.uniform(self.min_rand, self.max_rand),
+174	                            random.uniform(self.min_rand, self.max_rand),
+175	                            random.uniform(-math.pi, math.pi)
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/RRTStarDubins/rrt_star_dubins.py:175
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+174	                            random.uniform(self.min_rand, self.max_rand),
+175	                            random.uniform(-math.pi, math.pi)
+176	                            )
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/RRTStarReedsShepp/rrt_star_reeds_shepp.py:184
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+183	
+184	        rnd = self.Node(random.uniform(self.min_rand, self.max_rand),
+185	                        random.uniform(self.min_rand, self.max_rand),
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/RRTStarReedsShepp/rrt_star_reeds_shepp.py:185
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+184	        rnd = self.Node(random.uniform(self.min_rand, self.max_rand),
+185	                        random.uniform(self.min_rand, self.max_rand),
+186	                        random.uniform(-math.pi, math.pi)
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/RRTStarReedsShepp/rrt_star_reeds_shepp.py:186
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+185	                        random.uniform(self.min_rand, self.max_rand),
+186	                        random.uniform(-math.pi, math.pi)
+187	                        )
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/ReedsSheppPath/reeds_shepp_path_planning.py:400
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+399	    if not px:
+400	        assert False, "No path"
+401	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathPlanning/VoronoiRoadMap/voronoi_road_map.py:176
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+175	
+176	    assert rx, 'Cannot found path'
+177	
+178	    if show_animation:  # pragma: no cover
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathTracking/move_to_pose/move_to_pose.py:117
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+116	    for i in range(5):
+117	        x_start = 20 * random()
+118	        y_start = 20 * random()
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathTracking/move_to_pose/move_to_pose.py:118
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+117	        x_start = 20 * random()
+118	        y_start = 20 * random()
+119	        theta_start = 2 * np.pi * random() - np.pi
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathTracking/move_to_pose/move_to_pose.py:119
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+118	        y_start = 20 * random()
+119	        theta_start = 2 * np.pi * random() - np.pi
+120	        x_goal = 20 * random()
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathTracking/move_to_pose/move_to_pose.py:120
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+119	        theta_start = 2 * np.pi * random() - np.pi
+120	        x_goal = 20 * random()
+121	        y_goal = 20 * random()
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathTracking/move_to_pose/move_to_pose.py:121
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+120	        x_goal = 20 * random()
+121	        y_goal = 20 * random()
+122	        theta_goal = 2 * np.pi * random() - np.pi
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathTracking/move_to_pose/move_to_pose.py:122
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+121	        y_goal = 20 * random()
+122	        theta_goal = 2 * np.pi * random() - np.pi
+123	        print("Initial x: %.2f m\nInitial y: %.2f m\nInitial theta: %.2f rad\n" %
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathTracking/pure_pursuit/pure_pursuit.py:193
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+192	    # Test
+193	    assert lastIndex >= target_ind, "Cannot goal"
+194	
+195	    if show_animation:  # pragma: no cover
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathTracking/rear_wheel_feedback/rear_wheel_feedback.py:205
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+204	    # Test
+205	    assert goal_flag, "Cannot goal"
+206	
+207	    if show_animation:  # pragma: no cover
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/PathTracking/stanley_controller/stanley_controller.py:200
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+199	    # Test
+200	    assert last_idx >= target_idx, "Cannot reach goal"
+201	
+202	    if show_animation:  # pragma: no cover
+
+--------------------------------------------------
+>> Issue: [B404:blacklist] Consider possible security implications associated with subprocess module.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/docs/jupyternotebook2rst.py:8
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b404-import-subprocess
+7	"""
+8	import subprocess
+9	import os.path
+
+--------------------------------------------------
+>> Issue: [B602:subprocess_popen_with_shell_equals_true] subprocess call with shell=True identified, security issue.
+   Severity: High   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/docs/jupyternotebook2rst.py:52
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b602_subprocess_popen_with_shell_equals_true.html
+51	    print(cmd)
+52	    subprocess.call(cmd, shell=True)
+53	
+
+--------------------------------------------------
+>> Issue: [B602:subprocess_popen_with_shell_equals_true] subprocess call with shell=True identified, security issue.
+   Severity: High   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/docs/jupyternotebook2rst.py:63
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b602_subprocess_popen_with_shell_equals_true.html
+62	    # print(cmd)
+63	    subprocess.call(cmd, shell=True)
+64	
+
+--------------------------------------------------
+>> Issue: [B602:subprocess_popen_with_shell_equals_true] subprocess call with shell=True identified, security issue.
+   Severity: High   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/docs/jupyternotebook2rst.py:70
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b602_subprocess_popen_with_shell_equals_true.html
+69	    print(cmd)
+70	    subprocess.call(cmd, shell=True)
+71	
+
+--------------------------------------------------
+>> Issue: [B602:subprocess_popen_with_shell_equals_true] subprocess call with shell=True identified, security issue.
+   Severity: High   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/docs/jupyternotebook2rst.py:76
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b602_subprocess_popen_with_shell_equals_true.html
+75	    print(cmd)
+76	    subprocess.call(cmd, shell=True)
+77	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/tests/test_dubins_path_planning.py:12
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+11	    def check_edge_condition(px, py, pyaw, start_x, start_y, start_yaw, end_x, end_y, end_yaw):
+12	        assert (abs(px[0] - start_x) <= 0.01)
+13	        assert (abs(py[0] - start_y) <= 0.01)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/tests/test_dubins_path_planning.py:13
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+12	        assert (abs(px[0] - start_x) <= 0.01)
+13	        assert (abs(py[0] - start_y) <= 0.01)
+14	        assert (abs(pyaw[0] - start_yaw) <= 0.01)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/tests/test_dubins_path_planning.py:14
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+13	        assert (abs(py[0] - start_y) <= 0.01)
+14	        assert (abs(pyaw[0] - start_yaw) <= 0.01)
+15	        print("x", px[-1], end_x)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/tests/test_dubins_path_planning.py:16
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+15	        print("x", px[-1], end_x)
+16	        assert (abs(px[-1] - end_x) <= 0.01)
+17	        print("y", py[-1], end_y)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/tests/test_dubins_path_planning.py:18
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+17	        print("y", py[-1], end_y)
+18	        assert (abs(py[-1] - end_y) <= 0.01)
+19	        print("yaw", pyaw[-1], end_yaw)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/tests/test_dubins_path_planning.py:20
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+19	        print("yaw", pyaw[-1], end_yaw)
+20	        assert (abs(pyaw[-1] - end_yaw) <= 0.01)
+21	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/tests/test_reeds_shepp_path_planning.py:11
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+10	    def check_edge_condition(px, py, pyaw, start_x, start_y, start_yaw, end_x, end_y, end_yaw):
+11	        assert (abs(px[0] - start_x) <= 0.01)
+12	        assert (abs(py[0] - start_y) <= 0.01)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/tests/test_reeds_shepp_path_planning.py:12
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+11	        assert (abs(px[0] - start_x) <= 0.01)
+12	        assert (abs(py[0] - start_y) <= 0.01)
+13	        assert (abs(pyaw[0] - start_yaw) <= 0.01)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/tests/test_reeds_shepp_path_planning.py:13
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+12	        assert (abs(py[0] - start_y) <= 0.01)
+13	        assert (abs(pyaw[0] - start_yaw) <= 0.01)
+14	        print("x", px[-1], end_x)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/tests/test_reeds_shepp_path_planning.py:15
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+14	        print("x", px[-1], end_x)
+15	        assert (abs(px[-1] - end_x) <= 0.01)
+16	        print("y", py[-1], end_y)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/tests/test_reeds_shepp_path_planning.py:17
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+16	        print("y", py[-1], end_y)
+17	        assert (abs(py[-1] - end_y) <= 0.01)
+18	        print("yaw", pyaw[-1], end_yaw)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PythonRobotics/tests/test_reeds_shepp_path_planning.py:19
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+18	        print("yaw", pyaw[-1], end_yaw)
+19	        assert (abs(pyaw[-1] - end_yaw) <= 0.01)
+20	
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 15806
+	Total lines skipped (#nosec): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0.0
+		Low: 88.0
+		Medium: 0.0
+		High: 4.0
+	Total issues (by confidence):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 0.0
+		High: 92.0
+Files skipped (0):

@@ -1,0 +1,121 @@
+Run started:2020-04-26 19:35:54.493336
+
+Test results:
+>> Issue: [B605:start_process_with_a_shell] Starting a process with a shell, possible injection detected, security issue.
+   Severity: High   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/Autonomous_UAVs_Swarm_Mission/Drone_Matrix_Balloon_Hunter/MyPythonModule/DroneControlFunction.py:95
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b605_start_process_with_a_shell.html
+94	    while True:
+95	        response = os.system('ping -c 1 ' + router_host)
+96	        if response==0: # Link is OK.
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/Autonomous_UAVs_Swarm_Mission/Drone_Matrix_Balloon_Hunter/MyPythonModule/DroneControlFunction.py:238
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b102_exec_used.html
+237	            # Execute received command.
+238	            exec(immediate_command_str, globals())
+239	            # When command is executed, change status to 'wait for command'.
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/Autonomous_UAVs_Swarm_Mission/Drone_Matrix_Balloon_Hunter/MyPythonModule/DroneControlFunction.py:248
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b102_exec_used.html
+247	                # Execute immediate command.
+248	                exec(immediate_command_str, globals())
+249	                # Change __builtin__.status_waitForCommand to True to enable other calls.
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/Autonomous_UAVs_Swarm_Mission/Drone_Matrix_Balloon_Hunter/balloon_finder_follower.py:59
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b102_exec_used.html
+58	            # Execute received command.
+59	            exec(immediate_command_str, globals())
+60	            # When command is executed, change status to 'wait for command'.
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/Autonomous_UAVs_Swarm_Mission/Drone_Matrix_Balloon_Hunter/balloon_finder_follower.py:69
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b102_exec_used.html
+68	                # Execute immediate command.
+69	                exec(immediate_command_str, globals())
+70	                # Change __builtin__.status_waitForCommand to True to enable other calls.
+
+--------------------------------------------------
+>> Issue: [B605:start_process_with_a_shell] Starting a process with a shell, possible injection detected, security issue.
+   Severity: High   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/Autonomous_UAVs_Swarm_Mission/Drone_Matrix_Curvature_Flight/curvature_flight_function.py:93
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b605_start_process_with_a_shell.html
+92	    while True:
+93	        response = os.system('ping -c 1 ' + router_host)
+94	        if response==0: # Link is OK.
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/Autonomous_UAVs_Swarm_Mission/Drone_Matrix_Curvature_Flight/curvature_flight_function.py:222
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b102_exec_used.html
+221	            # Execute received command.
+222	            exec(immediate_command_str)
+223	            # When command is executed, change status to 'wait for command'.
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/Autonomous_UAVs_Swarm_Mission/Drone_Matrix_Curvature_Flight/curvature_flight_function.py:232
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b102_exec_used.html
+231	                # Execute immediate command.
+232	                exec(immediate_command_str)
+233	                # Change status_waitForCommand to True to enable other calls.
+
+--------------------------------------------------
+>> Issue: [B605:start_process_with_a_shell] Starting a process with a shell, possible injection detected, security issue.
+   Severity: High   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/Autonomous_UAVs_Swarm_Mission/Drone_Matrix_Formation_Flight/formation_function.py:43
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b605_start_process_with_a_shell.html
+42	    while True:
+43	        response = os.system('ping -c 1 ' + router_host)
+44	        if response==0: # Link is OK.
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/Autonomous_UAVs_Swarm_Mission/Drone_Matrix_Formation_Flight/formation_function.py:172
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b102_exec_used.html
+171	            # Execute received command.
+172	            exec(immediate_command_str)
+173	            # When command is executed, change status to 'wait for command'.
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/Autonomous_UAVs_Swarm_Mission/Drone_Matrix_Formation_Flight/formation_function.py:182
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b102_exec_used.html
+181	                # Execute immediate command.
+182	                exec(immediate_command_str)
+183	                # Change status_waitForCommand to True to enable other calls.
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 5611
+	Total lines skipped (#nosec): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 8.0
+		High: 3.0
+	Total issues (by confidence):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 0.0
+		High: 11.0
+Files skipped (2):
+	/Users/soneyabintahossain/cps_project_test/Autonomous_UAVs_Swarm_Mission/Drone_Matrix_Balloon_Hunter/MyPythonModule/ObjectDetection.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/Autonomous_UAVs_Swarm_Mission/Drone_Matrix_Balloon_Hunter/MyPythonModule/v4l2_device.py (syntax error while parsing AST from file)

@@ -1,0 +1,201 @@
+Run started:2020-04-27 15:57:18.084336
+
+Test results:
+>> Issue: [B322:blacklist] The input method in Python 2 will read from standard input, evaluate and run the resulting string as python source code. This is similar, though in many ways worse, then using eval. On Python 2, use raw_input instead, input is safe in Python 3.
+   Severity: High   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/power-wheel/attic/PiCamCollect.py:42
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b322-input
+41	    camera.start_recording(collector, format='rgb')
+42	    input('Press enter to stop recording') # will cause hang waiting for user input
+43	    camera.stop_recording()
+
+--------------------------------------------------
+>> Issue: [B322:blacklist] The input method in Python 2 will read from standard input, evaluate and run the resulting string as python source code. This is similar, though in many ways worse, then using eval. On Python 2, use raw_input instead, input is safe in Python 3.
+   Severity: High   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/power-wheel/attic/serialtester.py:58
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b322-input
+57	    camera.start_recording(Processor, format='rgb')
+58	    input('press enter to stop recording')
+59	    camera.stop_recording()
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/power-wheel/gensymdata/symdata.py:74
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+73	  print (tick)
+74	  heading = random.randrange(str_max_angle)
+75	  print(heading)
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/power-wheel/gensymdata/symdata.py:76
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+75	  print(heading)
+76	  fwd_energy = random.randrange(10,500)
+77	  print(fwd_energy)
+
+--------------------------------------------------
+>> Issue: [B322:blacklist] The input method in Python 2 will read from standard input, evaluate and run the resulting string as python source code. This is similar, though in many ways worse, then using eval. On Python 2, use raw_input instead, input is safe in Python 3.
+   Severity: High   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/power-wheel/ottoPiCam.py:135
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b322-input
+134	    camera.start_preview()
+135	    input('press enter to stop recording')
+136	    camera.stop_recording()
+
+--------------------------------------------------
+>> Issue: [B404:blacklist] Consider possible security implications associated with subprocess module.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/power-wheel/services/ottoMicroLogger.py:13
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b404-import-subprocess
+12	import RPi.GPIO as GPIO
+13	import subprocess  
+14	from subprocess import call
+
+--------------------------------------------------
+>> Issue: [B404:blacklist] Consider possible security implications associated with call module.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/power-wheel/services/ottoMicroLogger.py:14
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b404-import-subprocess
+13	import subprocess  
+14	from subprocess import call
+15	import shutil
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/power-wheel/services/ottoMicroLogger.py:18
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+17	import logging
+18	logging.basicConfig(filename='/tmp/ottoMicroLogger.log',level=logging.DEBUG)
+19	logging.debug( '\n\n new session \n' )
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/power-wheel/services/ottoMicroLogger.py:380
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b607_start_process_with_partial_path.html
+379				elif(os.path.exists( '/dev/sda1')):
+380					call ( 'mount /mnt/usbdrive', shell=True )
+381					logging.debug( 'OK: USB drive is remounted' )
+
+--------------------------------------------------
+>> Issue: [B602:subprocess_popen_with_shell_equals_true] subprocess call with shell=True seems safe, but may be changed in the future, consider rewriting without shell
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/power-wheel/services/ottoMicroLogger.py:380
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b602_subprocess_popen_with_shell_equals_true.html
+379				elif(os.path.exists( '/dev/sda1')):
+380					call ( 'mount /mnt/usbdrive', shell=True )
+381					logging.debug( 'OK: USB drive is remounted' )
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/power-wheel/services/ottoMicroLogger.py:391
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b607_start_process_with_partial_path.html
+390				
+391				call ( 'umount /mnt/usbdrive', shell=True )
+392				logging.debug( 'OK: USB drive unmounted' )
+
+--------------------------------------------------
+>> Issue: [B602:subprocess_popen_with_shell_equals_true] subprocess call with shell=True seems safe, but may be changed in the future, consider rewriting without shell
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/power-wheel/services/ottoMicroLogger.py:391
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b602_subprocess_popen_with_shell_equals_true.html
+390				
+391				call ( 'umount /mnt/usbdrive', shell=True )
+392				logging.debug( 'OK: USB drive unmounted' )
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/power-wheel/services/ottoMicroLogger.py:430
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b607_start_process_with_partial_path.html
+429				elif(os.path.exists( '/dev/sda1')):
+430					call ( 'mount /mnt/usbdrive', shell=True )
+431					logging.debug( 'OK: USB drive is remounted' )
+
+--------------------------------------------------
+>> Issue: [B602:subprocess_popen_with_shell_equals_true] subprocess call with shell=True seems safe, but may be changed in the future, consider rewriting without shell
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/power-wheel/services/ottoMicroLogger.py:430
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b602_subprocess_popen_with_shell_equals_true.html
+429				elif(os.path.exists( '/dev/sda1')):
+430					call ( 'mount /mnt/usbdrive', shell=True )
+431					logging.debug( 'OK: USB drive is remounted' )
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/power-wheel/services/ottoMicroLogger.py:441
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b607_start_process_with_partial_path.html
+440				
+441				call ( 'umount /mnt/usbdrive', shell=True )
+442				logging.debug( 'OK: USB drive unmounted' )
+
+--------------------------------------------------
+>> Issue: [B602:subprocess_popen_with_shell_equals_true] subprocess call with shell=True seems safe, but may be changed in the future, consider rewriting without shell
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/power-wheel/services/ottoMicroLogger.py:441
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b602_subprocess_popen_with_shell_equals_true.html
+440				
+441				call ( 'umount /mnt/usbdrive', shell=True )
+442				logging.debug( 'OK: USB drive unmounted' )
+
+--------------------------------------------------
+>> Issue: [B605:start_process_with_a_shell] Starting a process with a shell: Seems safe, but may be changed in the future, consider rewriting without shell
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/power-wheel/services/ottoMicroLogger.py:548
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b605_start_process_with_a_shell.html
+547				logging.debug( 'calling pi shutdown' )
+548				os.system( 'shutdown now -h' )
+549			
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/power-wheel/services/ottoMicroLogger.py:548
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b607_start_process_with_partial_path.html
+547				logging.debug( 'calling pi shutdown' )
+548				os.system( 'shutdown now -h' )
+549			
+
+--------------------------------------------------
+>> Issue: [B322:blacklist] The input method in Python 2 will read from standard input, evaluate and run the resulting string as python source code. This is similar, though in many ways worse, then using eval. On Python 2, use raw_input instead, input is safe in Python 3.
+   Severity: High   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/power-wheel/services/ottologger.py:105
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b322-input
+104	        camera.start_preview() #displays video while it's being recorded
+105	        input('Press enter to stop recording') # will cause hang waiting for user input
+106	      else : #we are not in debug mode, assume data collection is happening
+
+--------------------------------------------------
+>> Issue: [B322:blacklist] The input method in Python 2 will read from standard input, evaluate and run the resulting string as python source code. This is similar, though in many ways worse, then using eval. On Python 2, use raw_input instead, input is safe in Python 3.
+   Severity: High   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/power-wheel/threaded/imthreadedD.py:90
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b322-input
+89	    ipthread.start()
+90	    input('press enter to stop recording')
+91	    stopEvent.set()
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 4493
+	Total lines skipped (#nosec): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0.0
+		Low: 14.0
+		Medium: 1.0
+		High: 5.0
+	Total issues (by confidence):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 1.0
+		High: 19.0
+Files skipped (1):
+	/Users/soneyabintahossain/cps_project_test/power-wheel/attic/viewimg.py (syntax error while parsing AST from file)

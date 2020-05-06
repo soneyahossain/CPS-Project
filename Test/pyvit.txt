@@ -1,0 +1,202 @@
+Run started:2020-04-27 05:40:31.494457
+
+Test results:
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/pyvit/pyvit/bus.py:9
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+8	    def add_message(self, message):
+9	        assert isinstance(message, Message), 'invalid message'
+10	        if message in self._messages:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/pyvit/pyvit/bus.py:16
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+15	    def remove_message(self, message):
+16	        assert isinstance(Message, message), 'invalid message'
+17	        try:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/pyvit/pyvit/bus.py:23
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+22	    def parse_frame(self, frame):
+23	        assert isinstance(frame, can.Frame), 'invalid frame'
+24	        for message in self._messages:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/pyvit/pyvit/bus.py:43
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+42	    def add_signal(self, signal, start_bit):
+43	        assert isinstance(signal, Signal), 'invalid signal'
+44	        assert(isinstance(start_bit, int) and
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/pyvit/pyvit/bus.py:44
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+43	        assert isinstance(signal, Signal), 'invalid signal'
+44	        assert(isinstance(start_bit, int) and
+45	               (start_bit < 63, 'invalid start bit'))
+46	        self._signals[start_bit] = signal
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/pyvit/pyvit/bus.py:52
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+51	    def parse_frame(self, frame):
+52	        assert isinstance(frame, can.Frame), 'invalid frame'
+53	        assert frame.arb_id == self.arb_id, 'frame id does not match msg id'
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/pyvit/pyvit/bus.py:53
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+52	        assert isinstance(frame, can.Frame), 'invalid frame'
+53	        assert frame.arb_id == self.arb_id, 'frame id does not match msg id'
+54	
+55	        # combine 8 data bytes into single value
+56	        frame_value = 0
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/pyvit/pyvit/can.py:56
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+55	        # ensure value is an integer
+56	        assert isinstance(value, int), 'arbitration id must be an integer'
+57	        # ensure id is in range
+58	        if not self.is_extended_id and value >= 0 and value <= 0x7FF:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/pyvit/pyvit/can.py:73
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+72	        # data should be a list
+73	        assert isinstance(value, list), 'CAN data must be a list'
+74	        # data can only be 8 bytes maximum
+75	        assert not len(value) > 8, 'CAN data cannot contain more than 8 bytes'
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/pyvit/pyvit/can.py:75
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+74	        # data can only be 8 bytes maximum
+75	        assert not len(value) > 8, 'CAN data cannot contain more than 8 bytes'
+76	        # each byte must be a valid byte, int between 0x0 and 0xFF
+77	        for byte in value:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/pyvit/pyvit/can.py:78
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+77	        for byte in value:
+78	            assert isinstance(byte, int), 'CAN data must consist of bytes'
+79	            assert byte >= 0 and byte <= 0xFF, 'CAN data must consist of bytes'
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/pyvit/pyvit/can.py:79
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+78	            assert isinstance(byte, int), 'CAN data must consist of bytes'
+79	            assert byte >= 0 and byte <= 0xFF, 'CAN data must consist of bytes'
+80	        # data is valid
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/pyvit/pyvit/can.py:89
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+88	    def frame_type(self, value):
+89	        assert value == FrameType.DataFrame or value == FrameType.RemoteFrame \
+90	            or value == FrameType.ErrorFrame or \
+91	            value == FrameType.OverloadFrame, 'invalid frame type'
+92	        self._frame_type = value
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/pyvit/pyvit/hw/logplayer.py:14
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+13	    def start(self):
+14	        assert not self.running, 'cannot start, already running'
+15	
+16	        self.logfile = open(self.log_filename, 'r')
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/pyvit/pyvit/hw/logplayer.py:37
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+36	    def recv(self):
+37	        assert self.running, 'not running'
+38	
+39	        line = self.logfile.readline()
+
+--------------------------------------------------
+>> Issue: [B605:start_process_with_a_shell] Starting a process with a shell, possible injection detected, security issue.
+   Severity: High   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/pyvit/pyvit/hw/peak.py:12
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b605_start_process_with_a_shell.html
+11	    def _write_to_chardev(self, string):
+12	        os.system("echo '%s' > %s" % (string, self.device_filename))
+13	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/pyvit/pyvit/hw/socketcan.py:29
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+28	    def recv(self):
+29	        assert self.running, 'device not running'
+30	        frame_format = "=IB3xBBBBBBBB"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/pyvit/pyvit/hw/socketcan.py:51
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+50	    def send(self, frame):
+51	        assert self.running, 'device not running'
+52	        frame_format = "=IBBBBBBBBBBBB"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/pyvit/pyvit/log.py:28
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+27	    def log_frame(self, frame):
+28	        assert isinstance(frame, can.Frame), 'invalid frame'
+29	
+30	        if not self.started:
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 3038
+	Total lines skipped (#nosec): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0.0
+		Low: 18.0
+		Medium: 0.0
+		High: 1.0
+	Total issues (by confidence):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 0.0
+		High: 19.0
+Files skipped (0):

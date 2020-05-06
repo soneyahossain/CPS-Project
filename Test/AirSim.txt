@@ -1,0 +1,80 @@
+Run started:2020-04-26 19:31:14.409538
+
+Test results:
+>> Issue: [B403:blacklist] Consider possible security implications associated with pickle module.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/AirSim/PythonClient/car/DQNcar.py:20
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b403-import-pickle
+19	
+20	import pickle
+21	
+22	class ReplayMemory(object):
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/AirSim/PythonClient/car/DQNcar.py:55
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+54	        """
+55	        assert state.shape == self._state_shape, \
+56	            'Invalid state shape (required: %s, got: %s)' % (self._state_shape, state.shape)
+57	
+58	        self._states[self._pos] = state
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/AirSim/PythonClient/multirotor/DQNdrone.py:55
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+54	        """
+55	        assert state.shape == self._state_shape, \
+56	            'Invalid state shape (required: %s, got: %s)' % (self._state_shape, state.shape)
+57	
+58	        self._states[self._pos] = state
+
+--------------------------------------------------
+>> Issue: [B404:blacklist] Consider possible security implications associated with subprocess module.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/AirSim/docker/build_airsim_image.py:2
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b404-import-subprocess
+1	import argparse
+2	import subprocess
+3	
+4	def main():
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/AirSim/docker/build_airsim_image.py:36
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b603_subprocess_without_shell_equals_true.html
+35	    print(" ".join(docker_command))
+36	    subprocess.call(docker_command)
+37	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/AirSim/ros/src/airsim_tutorial_pkgs/scripts/multi_drone_json_creator.py:45
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+44	    def add_multirotor(self, vehicle_name, pose):
+45	        assert(self.data["SimMode"] == "Multirotor")
+46	        if "Vehicles" not in self.data.keys():
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 5088
+	Total lines skipped (#nosec): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0.0
+		Low: 6.0
+		Medium: 0.0
+		High: 0.0
+	Total issues (by confidence):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 0.0
+		High: 6.0
+Files skipped (0):

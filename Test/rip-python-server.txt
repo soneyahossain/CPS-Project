@@ -1,0 +1,178 @@
+Run started:2020-04-27 06:24:25.934405
+
+Test results:
+>> Issue: [B104:hardcoded_bind_all_interfaces] Possible binding to all interfaces.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/rip-python-server/HttpServer.py:98
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b104_hardcoded_bind_all_interfaces.html
+97	    cherrypy.config.update({
+98	      'server.socket_host': '0.0.0.0',
+99	      'server.socket_port': self.port,
+100	      'log.access_file' : access_log_file,
+101	      'log.errors_file' : error_log_file
+102	    })
+103	    config = {
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/rip-python-server/rip/RIPAdapterTemplate.py:62
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html
+61	          self.n = v
+62	      except:
+63	        pass
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/rip-python-server/rip/RIPAdapterTemplate.py:75
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html
+74	        toReturn[name] = random.rand
+75	      except:
+76	        pass
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/rip-python-server/rip/RIPAdapterTemplate.py:98
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+97	  def random(self):
+98	    return random.random()
+99	
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/rip-python-server/rip/RIPArduino.py:84
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html
+83	        toWrite[variables[i]] = values[i]
+84	      except:
+85	        pass
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/rip-python-server/rip/RIPArduino.py:100
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html
+99	        toReturn[name] = self.measurement[name]
+100	      except:
+101	        pass
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/rip-python-server/rip/RIPMatlab.py:44
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html
+43	          self.matlab.workspace[name] = value
+44	        except:
+45	          pass
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/rip-python-server/rip/RIPMatlab.py:50
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html
+49	        self.matlab.workspace[name] = value
+50	      except:
+51	        pass
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/rip-python-server/rip/RIPOctave.py:53
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html
+52	        octave.push(variables[i], values[i])
+53	      except:
+54	        pass
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/rip-python-server/rip/RIPOctave.py:66
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html
+65	        toReturn[name] = octave.pull(name)
+66	      except:
+67	        pass
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/rip-python-server/rip/core/RIPMeta.py:47
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html
+46	      params = [x.data for x in params]
+47	    except:
+48	      pass
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/rip-python-server/rip/matlab/MatlabConnector.py:41
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html
+40	          self.matlab.workspace[name] = value
+41	        except:
+42	          pass
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/rip-python-server/rip/matlab/MatlabConnector.py:47
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html
+46	        self.matlab.workspace[name] = value
+47	      except:
+48	        pass
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/rip-python-server/rip/matlab/MatlabConnector.py:57
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html
+56	          result[name] = value
+57	        except:
+58	          pass
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/rip-python-server/rip/matlab/MatlabConnector.py:65
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html
+64	          result.append(value)
+65	        except:
+66	          pass
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/rip-python-server/rip/matlab/MatlabConnector.py:75
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html
+74	      result = self.matlab.eval(command, nargout=0)
+75	    except:
+76	      pass
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/rip-python-server/test/testMatlabEngine.py:7
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html
+6	    result = _matlab.eval('y=1;', nargout=0)
+7	  except:
+8	    pass
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 1622
+	Total lines skipped (#nosec): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0.0
+		Low: 16.0
+		Medium: 1.0
+		High: 0.0
+	Total issues (by confidence):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 1.0
+		High: 16.0
+Files skipped (1):
+	/Users/soneyabintahossain/cps_project_test/rip-python-server/config-examples/AppConfig-Arduino.py (syntax error while parsing AST from file)

@@ -1,0 +1,224 @@
+Run started:2020-04-26 17:17:09.326815
+
+Test results:
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: '@b5d56m&tqvvfnevf^%l415g#29%5uuf1^!-xrseblejwvtor!'
+   Severity: Low   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/Smart-IoT-Planting-System/cloud/platform/sips/sips/settings.py:23
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b105_hardcoded_password_string.html
+22	# SECURITY WARNING: keep the secret key used in production secret!
+23	SECRET_KEY = '@b5d56m&tqvvfnevf^%l415g#29%5uuf1^!-xrseblejwvtor!'
+24	
+25	# SECURITY WARNING: don't run with debug turned on in production!
+26	DEBUG = True
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/Smart-IoT-Planting-System/device/src/upcd8544.py:147
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+146	        """ Sets the power mode of the LCD controller """
+147	        assert power in [self.POWER_UP, self.POWER_DOWN], "Power must be POWER_UP or POWER_DOWN."
+148	        self.power = power
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/Smart-IoT-Planting-System/device/src/upcd8544.py:154
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+153	        """ Sets the adressing mode """
+154	        assert addr in [self.ADDRESSING_HORIZ, self.ADDRESSING_VERT], "Addressing must be ADDRESSING_HORIZ or ADDRESSING_VERT."
+155	        self.addressing = addr
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/Smart-IoT-Planting-System/device/src/upcd8544.py:161
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+160	        """ Sets instruction set (basic/extended) """
+161	        assert instr in [self.INSTR_BASIC, self.INSTR_EXT], "Instr must be INSTR_BASIC or INSTR_EXT."
+162	        self.instr = instr
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/Smart-IoT-Planting-System/device/src/upcd8544.py:168
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+167	        """ Sets display mode (blank, black, normal, inverse) """
+168	        assert display_mode in [self.DISPLAY_BLANK, self.DISPLAY_ALL, self.DISPLAY_NORMAL, self.DISPLAY_INVERSE], "Mode must be one of DISPLAY_BLANK, DISPLAY_ALL, DISPLAY_NORMAL or DISPLAY_INVERSE."
+169	        assert self.instr == self.INSTR_BASIC, "Please switch to basic instruction set first."
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/Smart-IoT-Planting-System/device/src/upcd8544.py:169
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+168	        assert display_mode in [self.DISPLAY_BLANK, self.DISPLAY_ALL, self.DISPLAY_NORMAL, self.DISPLAY_INVERSE], "Mode must be one of DISPLAY_BLANK, DISPLAY_ALL, DISPLAY_NORMAL or DISPLAY_INVERSE."
+169	        assert self.instr == self.INSTR_BASIC, "Please switch to basic instruction set first."
+170	        self.display_mode = display_mode
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/Smart-IoT-Planting-System/device/src/upcd8544.py:175
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+174	        """ Sets temperature coefficient (0-3) """
+175	        assert 4 <= temp_coeff < 8, "Temperature coefficient must be one of TEMP_COEFF_0..TEMP_COEFF_3."
+176	        assert self.instr == self.INSTR_EXT, "Please switch to extended instruction set first."
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/Smart-IoT-Planting-System/device/src/upcd8544.py:176
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+175	        assert 4 <= temp_coeff < 8, "Temperature coefficient must be one of TEMP_COEFF_0..TEMP_COEFF_3."
+176	        assert self.instr == self.INSTR_EXT, "Please switch to extended instruction set first."
+177	        self.temp_coeff = temp_coeff
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/Smart-IoT-Planting-System/device/src/upcd8544.py:182
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+181	        """ Sets the LCD bias. """
+182	        assert 0x10 <= bias <= 0x17, "Bias must be one of BIAS_1_4..BIAS_1_11."
+183	        assert self.instr == self.INSTR_EXT, "Please switch to extended instruction set first."
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/Smart-IoT-Planting-System/device/src/upcd8544.py:183
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+182	        assert 0x10 <= bias <= 0x17, "Bias must be one of BIAS_1_4..BIAS_1_11."
+183	        assert self.instr == self.INSTR_EXT, "Please switch to extended instruction set first."
+184	        self.bias = bias
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/Smart-IoT-Planting-System/device/src/upcd8544.py:189
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+188	        """ Sets the voltage of the LCD charge pump in millivolts. """
+189	        assert 3060 <= millivolts <= 10680, "Voltage must be between 3,060 and 10,680 mV."
+190	        assert self.instr == self.INSTR_EXT, "Please switch to extended instruction set first."
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/Smart-IoT-Planting-System/device/src/upcd8544.py:190
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+189	        assert 3060 <= millivolts <= 10680, "Voltage must be between 3,060 and 10,680 mV."
+190	        assert self.instr == self.INSTR_EXT, "Please switch to extended instruction set first."
+191	        self.voltage = millivolts
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/Smart-IoT-Planting-System/device/src/upcd8544.py:199
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+198	        """ set LCD voltage, i.e. contrast """
+199	        assert 0x80 <= value <= 0xff, "contrast value must be between 0x80 and 0xff"
+200	        self.command([0x21, self.TEMP_COEFF_2, self.BIAS_1_7, value, 0x20, self.DISPLAY_NORMAL])
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/Smart-IoT-Planting-System/device/src/upcd8544.py:210
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+209	        """ set cursor to bank y, column x """
+210	        assert 0 <= x < self.width, "x must be between 0 and 83"
+211	        assert 0 <= y < self.height // 8, "y must be between 0 and 5"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/Smart-IoT-Planting-System/device/src/upcd8544.py:211
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+210	        assert 0 <= x < self.width, "x must be between 0 and 83"
+211	        assert 0 <= y < self.height // 8, "y must be between 0 and 5"
+212	        assert self.instr == self.INSTR_BASIC, "Please switch to basic instruction set first."
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/Smart-IoT-Planting-System/device/src/upcd8544.py:212
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+211	        assert 0 <= y < self.height // 8, "y must be between 0 and 5"
+212	        assert self.instr == self.INSTR_BASIC, "Please switch to basic instruction set first."
+213	        self.command([x + 0x80, y + 0x40])
+
+--------------------------------------------------
+>> Issue: [B605:start_process_with_a_shell] Starting a process with a shell: Seems safe, but may be changed in the future, consider rewriting without shell
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/Smart-IoT-Planting-System/gateway/src/sqlite/sqlite.py:5
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b605_start_process_with_a_shell.html
+4	
+5	commands.getstatusoutput('chmod 777 create_table.sh')
+6	commands.getstatusoutput('chmod 777 show.sh')
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/Smart-IoT-Planting-System/gateway/src/sqlite/sqlite.py:5
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b607_start_process_with_partial_path.html
+4	
+5	commands.getstatusoutput('chmod 777 create_table.sh')
+6	commands.getstatusoutput('chmod 777 show.sh')
+
+--------------------------------------------------
+>> Issue: [B605:start_process_with_a_shell] Starting a process with a shell: Seems safe, but may be changed in the future, consider rewriting without shell
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/Smart-IoT-Planting-System/gateway/src/sqlite/sqlite.py:6
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b605_start_process_with_a_shell.html
+5	commands.getstatusoutput('chmod 777 create_table.sh')
+6	commands.getstatusoutput('chmod 777 show.sh')
+7	commands.getstatusoutput('./create_table.sh')
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/Smart-IoT-Planting-System/gateway/src/sqlite/sqlite.py:6
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b607_start_process_with_partial_path.html
+5	commands.getstatusoutput('chmod 777 create_table.sh')
+6	commands.getstatusoutput('chmod 777 show.sh')
+7	commands.getstatusoutput('./create_table.sh')
+
+--------------------------------------------------
+>> Issue: [B605:start_process_with_a_shell] Starting a process with a shell: Seems safe, but may be changed in the future, consider rewriting without shell
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/Smart-IoT-Planting-System/gateway/src/sqlite/sqlite.py:7
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b605_start_process_with_a_shell.html
+6	commands.getstatusoutput('chmod 777 show.sh')
+7	commands.getstatusoutput('./create_table.sh')
+8	
+
+--------------------------------------------------
+>> Issue: [B605:start_process_with_a_shell] Starting a process with a shell: Seems safe, but may be changed in the future, consider rewriting without shell
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/Smart-IoT-Planting-System/gateway/src/sqlite/sqlite.py:9
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b605_start_process_with_a_shell.html
+8	
+9	commands.getstatusoutput('./show.sh')
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 1151
+	Total lines skipped (#nosec): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0.0
+		Low: 22.0
+		Medium: 0.0
+		High: 0.0
+	Total issues (by confidence):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 1.0
+		High: 21.0
+Files skipped (5):
+	/Users/soneyabintahossain/cps_project_test/Smart-IoT-Planting-System/cloud/database.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/Smart-IoT-Planting-System/cloud/db/db.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/Smart-IoT-Planting-System/cloud/echarts-python.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/Smart-IoT-Planting-System/gateway/src/main.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/Smart-IoT-Planting-System/gateway/src/post.py (syntax error while parsing AST from file)

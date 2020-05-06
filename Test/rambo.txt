@@ -1,0 +1,26 @@
+Run started:2020-04-27 15:36:59.691401
+
+Test results:
+	No issues identified.
+
+Code scanned:
+	Total lines of code: 742
+	Total lines skipped (#nosec): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 0.0
+		High: 0.0
+	Total issues (by confidence):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 0.0
+		High: 0.0
+Files skipped (5):
+	/Users/soneyabintahossain/self-driving-car/steering-models/community-models/rambo/predict.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/self-driving-car/steering-models/community-models/rambo/predict_online.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/self-driving-car/steering-models/community-models/rambo/preprocess_test_data.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/self-driving-car/steering-models/community-models/rambo/preprocess_train_data.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/self-driving-car/steering-models/community-models/rambo/train.py (syntax error while parsing AST from file)

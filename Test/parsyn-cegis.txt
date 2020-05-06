@@ -1,0 +1,149 @@
+Run started:2020-04-26 20:05:39.460247
+
+Test results:
+>> Issue: [B404:blacklist] Consider possible security implications associated with Popen module.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/parsyn-cegis/parsyn-cegis.py:16
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b404-import-subprocess
+15	import time
+16	from subprocess import Popen, PIPE
+17	import statistics
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/parsyn-cegis/parsyn-cegis.py:23
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+22	
+23	def SMTsolve(smt,params,filename='/tmp/parsyn-cegis.smt2'):
+24	    smt.append('(check-sat-using (par-or (using-params smt :random-seed 10) (using-params smt :random-seed 100) (using-params smt :random-seed 1000)))')
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/parsyn-cegis/parsyn-cegis.py:29
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b607_start_process_with_partial_path.html
+28	        f.write("\n".join(smt))
+29	    p = Popen(['z3', '-smt2', filename], stdin=PIPE, stdout=PIPE, stderr=PIPE)
+30	    output, err = p.communicate(b"")
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/parsyn-cegis/parsyn-cegis.py:29
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b603_subprocess_without_shell_equals_true.html
+28	        f.write("\n".join(smt))
+29	    p = Popen(['z3', '-smt2', filename], stdin=PIPE, stdout=PIPE, stderr=PIPE)
+30	    output, err = p.communicate(b"")
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/parsyn-cegis/parsyn-cegis.py:35
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+34	        print(err.decode('utf-8'))
+35	        assert False
+36	    output = output.decode('utf-8').split('\n')
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/parsyn-cegis/parsyn-cegis.py:48
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+47	def build_correctness_formula(k):
+48	    assert k > 0
+49	    input_arguments = " ".join(["(i{0} input)".format(j) for j in range(0,k)])
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/parsyn-cegis/parsyn-cegis.py:78
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+77	        int_value = int(s) # try to cast
+78	        return True, str(random.randint(-1000000,1000000))
+79	    except ValueError:
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/parsyn-cegis/parsyn-cegis.py:84
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+83	        float_value = float(s) # try to cast
+84	        return True, '{:f}'.format(random.uniform(-1000000.0,1000000.0))
+85	    except ValueError:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/parsyn-cegis/parsyn-cegis.py:99
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+98	        if s[0] == '/':
+99	            assert len(args) == 2
+100	            return True, args[0] / args[1]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/parsyn-cegis/parsyn-cegis.py:102
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+101	        elif s[0] == '-':
+102	            assert len(args) == 1
+103	            return True, -args[0]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/parsyn-cegis/parsyn-cegis.py:173
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+172	                # print(old_value)
+173	                assert new_value[0] == True
+174	                assert old_value[0] == True
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/parsyn-cegis/parsyn-cegis.py:174
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+173	                assert new_value[0] == True
+174	                assert old_value[0] == True
+175	                progress = new_value[1] - old_value[1]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/parsyn-cegis/sexpr.py:204
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+203	def test():
+204	  assert str2sexpr("(this ;comment\n is (a test (sentences) (des()) (yo)))") == \
+205	         [["this", "is", ["a", "test", ["sentences"], ["des", []], ["yo"]]]]
+206	  assert str2sexpr('''(paren\\(\\)theses_in\\#symbol "space in \nsymbol"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/parsyn-cegis/sexpr.py:206
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+205	         [["this", "is", ["a", "test", ["sentences"], ["des", []], ["yo"]]]]
+206	  assert str2sexpr('''(paren\\(\\)theses_in\\#symbol "space in \nsymbol"
+207	                   this\\ way\\ also. "escape is \\"better than\\" quote")''') == \
+208	         [['paren()theses_in#symbol', 'space in \nsymbol', 'this way also.', 'escape is "better than" quote']]
+209	  str2sexpr("(this (is (a (parial (sentence")
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 535
+	Total lines skipped (#nosec): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0.0
+		Low: 13.0
+		Medium: 1.0
+		High: 0.0
+	Total issues (by confidence):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 1.0
+		High: 13.0
+Files skipped (0):

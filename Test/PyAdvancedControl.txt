@@ -1,0 +1,577 @@
+Run started:2020-04-26 20:24:33.208877
+
+Test results:
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_modeling/mpc_modeling.py:595
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+594	        print(i, j)
+595	        assert (i - j) <= 0.01, "Error"
+596	    print("test x2")
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_modeling/mpc_modeling.py:599
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+598	        print(i, j)
+599	        assert (i - j) <= 0.01, "Error"
+600	    print("test u")
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_modeling/mpc_modeling.py:603
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+602	        print(i, j)
+603	        assert (i - j) <= 0.01, "Error"
+604	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_modeling/mpc_modeling_with_ECOS.py:495
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+494	        print(i, j)
+495	        assert (i - j) <= 0.01, "Error"
+496	    print("test x2")
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_modeling/mpc_modeling_with_ECOS.py:499
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+498	        print(i, j)
+499	        assert (i - j) <= 0.01, "Error"
+500	    print("test u")
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_modeling/mpc_modeling_with_ECOS.py:503
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+502	        print(i, j)
+503	        assert (i - j) <= 0.01, "Error"
+504	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_modeling/pyecosqp.py:32
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+31	    # H
+32	    assert H.shape[0] == H.shape[1], "Hessian must be a square matrix"
+33	
+34	    n = H.shape[0]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_modeling/pyecosqp.py:40
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+39	    else:
+40	        assert f.shape[0] == n, "Linear term f must be a column vector of length"
+41	        assert f.shape[1] == 1, "Linear term f must be a column vector"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_modeling/pyecosqp.py:41
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+40	        assert f.shape[0] == n, "Linear term f must be a column vector of length"
+41	        assert f.shape[1] == 1, "Linear term f must be a column vector"
+42	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_modeling/pyecosqp.py:127
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+126	
+127	    assert sol["x"][0] - 0.0, "Error1"
+128	    assert sol["x"][1] - 5.0, "Error2"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_modeling/pyecosqp.py:128
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+127	    assert sol["x"][0] - 0.0, "Error1"
+128	    assert sol["x"][1] - 5.0, "Error2"
+129	
+130	    P = np.diag([1.0, 0.0])
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_modeling/pyecosqp.py:138
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+137	    for i in range(len(sol["x"])):
+138	        assert (sol["x"][i] - sol2["x"][i]) <= 0.001, "Error1"
+139	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_modeling/pyecosqp.py:194
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+193	        print(sol["x"][i], sol2["x"][i])
+194	        assert (sol["x"][i] - sol2["x"][i]) <= 0.001, "Error1"
+195	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_modeling/pyecosqp.py:267
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+266	        print(sol["x"][i], sol2["x"][i])
+267	        assert (sol["x"][i] - sol2["x"][i]) <= 0.001, "Error1"
+268	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:243
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+242	        for (i, j) in zip(rx[ii, :].T, x[:, ii]):
+243	            assert (i - j) <= 0.0001, "Error" + str(i) + "," + str(j)
+244	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:248
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+247	        #  print(x[-1, ii] - target[-1, ii])
+248	        assert abs(x[-1, ii] - target[-1, ii]) <= 0.3, "Error"
+249	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:289
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+288	        for (i, j) in zip(rx[ii, :].T, x[:, ii]):
+289	            assert (i - j) <= 0.0001, "Error" + str(i) + "," + str(j)
+290	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:293
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+292	    for ii in range(len(x[0, :]) + 1):
+293	        assert abs(x[-1, ii] - target[-1, ii]) <= 0.3, "Error"
+294	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:334
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+333	        for (i, j) in zip(rx[ii, :].T, x[:, ii]):
+334	            assert (i - j) <= 0.0001, "Error" + str(i) + "," + str(j)
+335	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:338
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+337	    for ii in range(len(x[0, :]) + 1):
+338	        assert abs(x[-1, ii] - target[-1, ii]) <= 0.3, "Error"
+339	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:379
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+378	        for (i, j) in zip(rx[ii, :].T, x[:, ii]):
+379	            assert (i - j) <= 0.0001, "Error" + str(i) + "," + str(j)
+380	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:383
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+382	    for ii in range(len(x[0, :]) + 1):
+383	        assert abs(x[-1, ii] - target[-1, ii]) <= 0.3, "Error"
+384	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:426
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+425	        for (i, j) in zip(rx[ii, :].T, x[:, ii]):
+426	            assert (i - j) <= 0.0001, "Error" + str(i) + "," + str(j)
+427	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:430
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+429	    for ii in range(len(x[0, :]) + 1):
+430	        assert abs(x[-1, ii] - target[-1, ii]) <= 0.3, "Error"
+431	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:478
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+477	        for (i, j) in zip(rx[ii, :].T, x[:, ii]):
+478	            assert (i - j) <= 0.0001, "Error" + str(i) + "," + str(j)
+479	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:482
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+481	    for ii in range(len(x[0, :]) + 1):
+482	        assert abs(x[-1, ii] - target[-1, ii]) <= 0.3, "Error"
+483	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:485
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+484	    for i in du:
+485	        assert i <= maxdu + 0.0001, "Error" + str(i) + "," + str(maxdu)
+486	        assert i >= mindu - 0.0001, "Error" + str(i) + "," + str(mindu)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:486
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+485	        assert i <= maxdu + 0.0001, "Error" + str(i) + "," + str(maxdu)
+486	        assert i >= mindu - 0.0001, "Error" + str(i) + "," + str(mindu)
+487	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:534
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+533	        for (i, j) in zip(rx[ii, :].T, x[:, ii]):
+534	            assert (i - j) <= 0.0001, "Error" + str(i) + "," + str(j)
+535	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:538
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+537	    for ii in range(len(x[0, :]) + 1):
+538	        assert abs(x[-1, ii] - target[-1, ii]) <= 0.3, "Error"
+539	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:541
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+540	    for i in du:
+541	        assert i <= maxdu + 0.0001, "Error" + str(i) + "," + str(maxdu)
+542	        assert i >= mindu - 0.0001, "Error" + str(i) + "," + str(mindu)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:542
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+541	        assert i <= maxdu + 0.0001, "Error" + str(i) + "," + str(maxdu)
+542	        assert i >= mindu - 0.0001, "Error" + str(i) + "," + str(mindu)
+543	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:590
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+589	        for (i, j) in zip(rx[ii, :].T, x[:, ii]):
+590	            assert (i - j) <= 0.0001, "Error" + str(i) + "," + str(j)
+591	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:594
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+593	    for ii in range(len(x[0, :]) + 1):
+594	        assert abs(x[-1, ii] - target[-1, ii]) <= 0.3, "Error"
+595	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:597
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+596	    for i in du:
+597	        assert i <= maxdu + 0.0001, "Error" + str(i) + "," + str(maxdu)
+598	        assert i >= mindu - 0.0001, "Error" + str(i) + "," + str(mindu)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:598
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+597	        assert i <= maxdu + 0.0001, "Error" + str(i) + "," + str(maxdu)
+598	        assert i >= mindu - 0.0001, "Error" + str(i) + "," + str(mindu)
+599	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:646
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+645	        for (i, j) in zip(rx[ii, :].T, x[:, ii]):
+646	            assert (i - j) <= 0.0001, "Error" + str(i) + "," + str(j)
+647	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:650
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+649	    for ii in range(len(x[0, :]) + 1):
+650	        assert abs(x[-1, ii] - target[-1, ii]) <= 0.3, "Error"
+651	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:653
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+652	    for i in u:
+653	        assert i <= maxu + 0.0001, "Error" + str(i) + "," + str(maxu)
+654	        assert i >= minu - 0.0001, "Error" + str(i) + "," + str(minu)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:654
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+653	        assert i <= maxu + 0.0001, "Error" + str(i) + "," + str(maxu)
+654	        assert i >= minu - 0.0001, "Error" + str(i) + "," + str(minu)
+655	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:701
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+700	        for (i, j) in zip(rx[ii, :].T, x[:, ii]):
+701	            assert (i - j) <= 0.0001, "Error" + str(i) + "," + str(j)
+702	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:705
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+704	    for ii in range(len(x[0, :]) + 1):
+705	        assert abs(x[-1, ii] - target[-1, ii]) <= 0.3, "Error"
+706	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:709
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+708	        #  assert i <= maxu + 0.0001, "Error" + str(i) + "," + str(maxu)
+709	        assert i >= minu - 0.0001, "Error" + str(i) + "," + str(minu)
+710	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:757
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+756	        for (i, j) in zip(rx[ii, :].T, x[:, ii]):
+757	            assert (i - j) <= 0.0001, "Error" + str(i) + "," + str(j)
+758	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:761
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+760	    for ii in range(len(x[0, :]) + 1):
+761	        assert abs(x[-1, ii] - target[-1, ii]) <= 0.3, "Error"
+762	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:765
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+764	        for i in range(len(x[0, :])):
+765	            assert x[ii, i] <= maxx[i, 0], "Error" + \
+766	                str(x[ii, i]) + "," + str(maxx[i, 0])
+767	            assert x[ii, i] >= minx[i, 0], "Error" + \
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:767
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+766	                str(x[ii, i]) + "," + str(maxx[i, 0])
+767	            assert x[ii, i] >= minx[i, 0], "Error" + \
+768	                str(x[ii, i]) + "," + str(minx[i, 0])
+769	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:819
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+818	        for (i, j) in zip(rx[ii, :].T, x[:, ii]):
+819	            assert (i - j) <= 0.0001, "Error" + str(i) + "," + str(j)
+820	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:823
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+822	    for ii in range(len(x[0, :]) + 1):
+823	        assert abs(x[-1, ii] - target[-1, ii]) <= 0.3, "Error"
+824	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:827
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+826	        for i in range(len(x[0, :])):
+827	            assert x[ii, i] <= maxx[i, 0], "Error" + \
+828	                str(x[ii, i]) + "," + str(maxx[i, 0])
+829	            assert x[ii, i] >= minx[i, 0], "Error" + \
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:829
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+828	                str(x[ii, i]) + "," + str(maxx[i, 0])
+829	            assert x[ii, i] >= minx[i, 0], "Error" + \
+830	                str(x[ii, i]) + "," + str(minx[i, 0])
+831	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:833
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+832	    for i in du:
+833	        assert i <= maxdu + 0.0001, "Error" + str(i) + "," + str(maxdu)
+834	        assert i >= mindu - 0.0001, "Error" + str(i) + "," + str(mindu)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/mpc_tracking.py:834
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+833	        assert i <= maxdu + 0.0001, "Error" + str(i) + "," + str(maxdu)
+834	        assert i >= mindu - 0.0001, "Error" + str(i) + "," + str(mindu)
+835	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/pyecosqp.py:32
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+31	    # H
+32	    assert H.shape[0] == H.shape[1], "Hessian must be a square matrix"
+33	
+34	    n = H.shape[0]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/pyecosqp.py:40
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+39	    else:
+40	        assert f.shape[0] == n, "Linear term f must be a column vector of length"
+41	        assert f.shape[1] == 1, "Linear term f must be a column vector"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/pyecosqp.py:41
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+40	        assert f.shape[0] == n, "Linear term f must be a column vector of length"
+41	        assert f.shape[1] == 1, "Linear term f must be a column vector"
+42	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/pyecosqp.py:127
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+126	
+127	    assert sol["x"][0] - 0.0, "Error1"
+128	    assert sol["x"][1] - 5.0, "Error2"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/pyecosqp.py:128
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+127	    assert sol["x"][0] - 0.0, "Error1"
+128	    assert sol["x"][1] - 5.0, "Error2"
+129	
+130	    P = np.diag([1.0, 0.0])
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/pyecosqp.py:138
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+137	    for i in range(len(sol["x"])):
+138	        assert (sol["x"][i] - sol2["x"][i]) <= 0.001, "Error1"
+139	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/pyecosqp.py:194
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+193	        print(sol["x"][i], sol2["x"][i])
+194	        assert (sol["x"][i] - sol2["x"][i]) <= 0.001, "Error1"
+195	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/PyAdvancedControl/mpc_tracking/pyecosqp.py:267
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+266	        print(sol["x"][i], sol2["x"][i])
+267	        assert (sol["x"][i] - sol2["x"][i]) <= 0.001, "Error1"
+268	
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 2646
+	Total lines skipped (#nosec): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0.0
+		Low: 61.0
+		Medium: 0.0
+		High: 0.0
+	Total issues (by confidence):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 0.0
+		High: 61.0
+Files skipped (0):

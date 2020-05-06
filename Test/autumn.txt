@@ -1,0 +1,56 @@
+Run started:2020-04-27 15:35:26.538871
+
+Test results:
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/autumn/autumn/data_reader.py:27
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+26	                angle = float(row['steering_angle'])
+27	                if angle > 0.1 or angle < -0.1 and random.random() > 0.2:
+28	                    xs.append(DATA_DIR + 'training/center/flow_7_cart/' + row['frame_id'] + FILE_EXT)
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/autumn/autumn/data_reader.py:31
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+30	                    count01 += 1
+31	                elif (angle > 0.05 or angle < -0.5) and random.random() > 0.2:
+32	                    xs.append(DATA_DIR + 'training/center/flow_7_cart/' + row['frame_id'] + FILE_EXT)
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/autumn/autumn/data_reader.py:35
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+34	                    count005 += 1
+35	                elif (angle > 0.02 or angle < -0.02) and random.random() > 0.7:
+36	                    xs.append(DATA_DIR + 'training/center/flow_7_cart/' + row['frame_id'] + FILE_EXT)
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/self-driving-car/steering-models/community-models/autumn/autumn/data_reader.py:39
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+38	                    count002 += 1
+39	                elif random.random() > 0.8:
+40	                    xs.append(DATA_DIR + 'training/center/flow_7_cart/' + row['frame_id'] + FILE_EXT)
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 453
+	Total lines skipped (#nosec): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0.0
+		Low: 4.0
+		Medium: 0.0
+		High: 0.0
+	Total issues (by confidence):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 0.0
+		High: 4.0
+Files skipped (0):

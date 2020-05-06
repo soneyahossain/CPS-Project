@@ -1,0 +1,383 @@
+Run started:2020-04-26 14:59:48.617865
+
+Test results:
+>> Issue: [B404:blacklist] Consider possible security implications associated with call module.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/examples/s3-2017/plc2.py:10
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b404-import-subprocess
+9	
+10	from subprocess import call
+11	from shlex import split
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/examples/s3-2017/plc2.py:65
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+64	            # NOTE: challenge 1
+65	            confuse = randint(0, 40)
+66	            self.send((flag3,), confuse, PLC3_ADDR)
+
+--------------------------------------------------
+>> Issue: [B404:blacklist] Consider possible security implications associated with call module.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/examples/s3-2017/plc3.py:5
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b404-import-subprocess
+4	
+5	from subprocess import call
+6	from shlex import split
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/examples/s3-2017/plc3.py:63
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+62	            # NOTE: challenge 1
+63	            confuse = randint(0, 40)
+64	            self.send((flag2,), confuse, PLC2_ADDR)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/examples/s3-2017/rtu2a.py:40
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+39	
+40	        assert (len(wadi1_bin) / 8) == len(wadi1)
+41	        # print('DEBUG: len(wadi1): {}'.format(len(wadi1)))
+42	        # print('DEBUG: len(wadi1_bin): {}'.format(len(wadi1_bin)))
+43	        # print('DEBUG: len(wadi1_bin)/8: {}'.format(len(wadi1_bin) / 8))
+44	
+45	        count = 0
+
+--------------------------------------------------
+>> Issue: [B404:blacklist] Consider possible security implications associated with call module.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/examples/s3-2017/topo.py:16
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b404-import-subprocess
+15	from utils import IP_SWAT, MAC_SWAT, NETMASK_SWAT
+16	from subprocess import call
+17	
+18	class AttackerNode(Node):
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/minicps/pymodbus/synch-client.py:71
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+70	                hr_write = client.write_register(args.offset, args.register[0])
+71	                assert(hr_write.function_code < 0x80)
+72	            else:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/minicps/pymodbus/synch-client.py:74
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+73	                hrs_write = client.write_registers(args.offset, args.register)
+74	                assert(hrs_write.function_code < 0x80)
+75	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/minicps/pymodbus/synch-client.py:85
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+84	                    co_write = client.write_coil(args.offset, False)
+85	                assert(co_write.function_code < 0x80)
+86	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/minicps/pymodbus/synch-client.py:95
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+94	                cos_write = client.write_coils(args.offset, coils)
+95	                assert(cos_write.function_code < 0x80)
+96	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/minicps/pymodbus/synch-client.py:104
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+103	                count=args.count)
+104	            assert(hr_read.function_code < 0x80)
+105	            print(hr_read.registers[0:args.count])
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/minicps/pymodbus/synch-client.py:111
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+110	                count=args.count)
+111	            assert(ir_read.function_code < 0x80)
+112	            print(ir_read.registers[0:args.count])
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/minicps/pymodbus/synch-client.py:118
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+117	                count=args.count)
+118	            assert(di_read.function_code < 0x80)
+119	            print(di_read.bits)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/minicps/pymodbus/synch-client.py:125
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+124	                count=args.count)
+125	            assert(co_read.function_code < 0x80)
+126	            print(co_read.bits)
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/minicps/utils.py:29
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+28	        lformat='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+29	        ldir='/tmp/',
+30	        suffix=''):
+31	    """Build a custom Python debug logger file.
+32	
+33	    :name: name of the logger instance
+34	    :bytes_per_file: defaults to 10KB
+35	    :rotating_files: defaults to 3
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/minicps/utils.py:70
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+69	
+70	TEMP_DIR = '/tmp'
+71	
+72	LOG_DIR = 'logs/'
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/misc/pox_controller.py:186
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+185	
+186	        assert(type(ipsrc) == str)
+187	        assert(type(macsrc) == str)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/misc/pox_controller.py:187
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+186	        assert(type(ipsrc) == str)
+187	        assert(type(macsrc) == str)
+188	        assert(type(ipdst) == str)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/misc/pox_controller.py:188
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+187	        assert(type(macsrc) == str)
+188	        assert(type(ipdst) == str)
+189	        assert(type(macdst) == str)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/misc/pox_controller.py:189
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+188	        assert(type(ipdst) == str)
+189	        assert(type(macdst) == str)
+190	        assert(type(port) == int)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/misc/pox_controller.py:190
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+189	        assert(type(macdst) == str)
+190	        assert(type(port) == int)
+191	
+192	        arp_reply = pkt.arp()
+
+--------------------------------------------------
+>> Issue: [B605:start_process_with_a_shell] Starting a process with a shell: Seems safe, but may be changed in the future, consider rewriting without shell
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/misc/swat_utils.py:39
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b605_start_process_with_a_shell.html
+38	    try:
+39	        os.system("python examples/swat/state_db.py")
+40	        os.system("mkdir -p examples/swat/err")
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/misc/swat_utils.py:39
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b607_start_process_with_partial_path.html
+38	    try:
+39	        os.system("python examples/swat/state_db.py")
+40	        os.system("mkdir -p examples/swat/err")
+
+--------------------------------------------------
+>> Issue: [B605:start_process_with_a_shell] Starting a process with a shell: Seems safe, but may be changed in the future, consider rewriting without shell
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/misc/swat_utils.py:40
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b605_start_process_with_a_shell.html
+39	        os.system("python examples/swat/state_db.py")
+40	        os.system("mkdir -p examples/swat/err")
+41	        os.system('rm -f example/swat/err/*')
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/misc/swat_utils.py:40
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b607_start_process_with_partial_path.html
+39	        os.system("python examples/swat/state_db.py")
+40	        os.system("mkdir -p examples/swat/err")
+41	        os.system('rm -f example/swat/err/*')
+
+--------------------------------------------------
+>> Issue: [B605:start_process_with_a_shell] Starting a process with a shell: Seems safe, but may be changed in the future, consider rewriting without shell
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/misc/swat_utils.py:41
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b605_start_process_with_a_shell.html
+40	        os.system("mkdir -p examples/swat/err")
+41	        os.system('rm -f example/swat/err/*')
+42	    except Exception:
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/misc/swat_utils.py:41
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b607_start_process_with_partial_path.html
+40	        os.system("mkdir -p examples/swat/err")
+41	        os.system('rm -f example/swat/err/*')
+42	    except Exception:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/scripts/pox/l2_learning.py:191
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+190	        _flood_delay = int(str(hold_down), 10)  # base 10 conversion
+191	        assert _flood_delay >= 0
+192	    except:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/scripts/pymodbus/synch-client.py:70
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+69	                hr_write = client.write_register(args.offset, args.register[0])
+70	                assert(hr_write.function_code < 0x80)
+71	            else:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/scripts/pymodbus/synch-client.py:73
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+72	                hrs_write = client.write_registers(args.offset, args.register)
+73	                assert(hrs_write.function_code < 0x80)
+74	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/scripts/pymodbus/synch-client.py:83
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+82	                    co_write = client.write_coil(args.offset, False)
+83	                assert(co_write.function_code < 0x80)
+84	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/scripts/pymodbus/synch-client.py:93
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+92	                cos_write = client.write_coils(args.offset, coils)
+93	                assert(cos_write.function_code < 0x80)
+94	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/scripts/pymodbus/synch-client.py:102
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+101	                count=args.count)
+102	            assert(hr_read.function_code < 0x80)
+103	            print(hr_read.registers[0:args.count])
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/scripts/pymodbus/synch-client.py:109
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+108	                count=args.count)
+109	            assert(ir_read.function_code < 0x80)
+110	            print(ir_read.registers[0:args.count])
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/scripts/pymodbus/synch-client.py:116
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+115	                count=args.count)
+116	            assert(di_read.function_code < 0x80)
+117	            print(di_read.bits)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/minicps/scripts/pymodbus/synch-client.py:123
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+122	                count=args.count)
+123	            assert(co_read.function_code < 0x80)
+124	            print(co_read.bits)
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 6671
+	Total lines skipped (#nosec): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0.0
+		Low: 34.0
+		Medium: 2.0
+		High: 0.0
+	Total issues (by confidence):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 2.0
+		High: 34.0
+Files skipped (27):
+	/Users/soneyabintahossain/cps_project_test/minicps/bin/pox-init.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/minicps/docs/conf.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/minicps/examples/s3-2017/init.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/minicps/examples/s3-2017/run-local.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/minicps/examples/s3-2017/run.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/minicps/examples/swat-s1/init.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/minicps/examples/swat-s1/physical_process.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/minicps/examples/swat-s1/plc1.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/minicps/examples/swat-s1/plc2.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/minicps/examples/swat-s1/plc3.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/minicps/examples/toy/init.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/minicps/examples/toy/plc1.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/minicps/examples/toy/plc2.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/minicps/minicps/devices.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/minicps/minicps/protocols.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/minicps/minicps/pymodbus/asynch-client.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/minicps/minicps/pymodbus/servers.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/minicps/minicps/states.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/minicps/misc/hmi.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/minicps/misc/swat_constants.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/minicps/scripts/pymodbus/asynch-client.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/minicps/scripts/pymodbus/servers.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/minicps/tests/devices_tests.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/minicps/tests/mcps_tests.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/minicps/tests/networks_tests.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/minicps/tests/protocols_tests.py (syntax error while parsing AST from file)
+	/Users/soneyabintahossain/cps_project_test/minicps/tests/states_tests.py (syntax error while parsing AST from file)

@@ -1,0 +1,996 @@
+Run started:2020-04-26 16:03:12.302778
+
+Test results:
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_api/test_synapse_view.py:253
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+252	            # Scenario 1 : input wav file
+253	            temp_file = "/tmp/kalliope/tempfile.wav"  # tempfile.NamedTemporaryFile(suffix=".wav")
+254	            result_file = self.flask_api.synapses_blueprint._convert_to_wav(temp_file)
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_api/test_synapse_view.py:259
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+258	            # Scenario 2 : input not a wav file
+259	            temp_file = "/tmp/kalliope/tempfile.amr"  # tempfile.NamedTemporaryFile(suffix=".wav")
+260	            expected_result = "/tmp/kalliope/tempfile.wav"
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_api/test_synapse_view.py:260
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+259	            temp_file = "/tmp/kalliope/tempfile.amr"  # tempfile.NamedTemporaryFile(suffix=".wav")
+260	            expected_result = "/tmp/kalliope/tempfile.wav"
+261	            result_file = self.flask_api.synapses_blueprint._convert_to_wav(temp_file)
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_file_manager.py:25
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+24	        # set up
+25	        cache_path = "/tmp/kalliope/tests/testDirectory"
+26	        if os.path.exists(cache_path):
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_file_manager.py:43
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+42	        # set up the context
+43	        dir_path = "/tmp/kalliope/tests/"
+44	        file_name = "test_FileManager_writeInFile"
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_file_manager.py:83
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+82	        # set up the context
+83	        dir_path = "/tmp/kalliope/tests/"
+84	        file_name = "test_FileManager_fileIsEmpty"
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_file_manager.py:108
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+107	        # set up the context
+108	        dir_path = "/tmp/kalliope/tests/"
+109	        file_name = "test_FileManager_fileRemove"
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_file_manager.py:132
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+131	        # set up the context
+132	        dir_path = "/tmp/kalliope/tests/"
+133	        file_name = "test_FileManager_filePathCreatable"
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_file_manager.py:159
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+158	        # set up the context
+159	        dir_path = "/tmp/kalliope/tests/"
+160	        file_name = "test_FileManager_fileIsPathExistsOrCreatable"
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_hook_manager.py:18
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+17	        # Init the folders, otherwise it raises an exceptions
+18	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/neurons")
+19	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/stt")
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_hook_manager.py:19
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+18	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/neurons")
+19	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/stt")
+20	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/tts")
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_hook_manager.py:20
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+19	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/stt")
+20	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/tts")
+21	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/trigger")
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_hook_manager.py:21
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+20	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/tts")
+21	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/trigger")
+22	
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_hook_manager.py:33
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+32	        # Cleanup
+33	        shutil.rmtree('/tmp/kalliope/tests/kalliope_resources_dir')
+34	
+
+--------------------------------------------------
+>> Issue: [B106:hardcoded_password_funcarg] Possible hardcoded password: 'password'
+   Severity: Low   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_models.py:216
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b106_hardcoded_password_funcarg.html
+215	
+216	        rest_api1 = RestAPI(password_protected=True, login="admin", password="password", active=True,
+217	                            port=5000, allowed_cors_origin="*")
+218	
+
+--------------------------------------------------
+>> Issue: [B106:hardcoded_password_funcarg] Possible hardcoded password: 'password'
+   Severity: Low   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_models.py:222
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b106_hardcoded_password_funcarg.html
+221	
+222	        rest_api3 = RestAPI(password_protected=True, login="admin", password="password", active=True,
+223	                            port=5000, allowed_cors_origin="*")
+224	
+
+--------------------------------------------------
+>> Issue: [B106:hardcoded_password_funcarg] Possible hardcoded password: 'password'
+   Severity: Low   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_models.py:241
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b106_hardcoded_password_funcarg.html
+240	        with mock.patch('platform.machine', return_value='pumpkins'):
+241	            rest_api1 = RestAPI(password_protected=True,
+242	                                login="admin",
+243	                                password="password",
+244	                                active=True,
+245	                                port=5000, allowed_cors_origin="*")
+246	
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_models.py:265
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+264	                                rest_api=rest_api1,
+265	                                cache_path="/tmp/kalliope",
+266	                                resources=resources,
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_models.py:281
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+280	                                rest_api=rest_api1,
+281	                                cache_path="/tmp/kalliope",
+282	                                resources=resources,
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_models.py:296
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+295	                                rest_api=rest_api1,
+296	                                cache_path="/tmp/kalliope",
+297	                                resources=resources,
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_models.py:303
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+302	
+303	            expected_result_serialize = {'default_tts_name': 'pico2wav', 'default_stt_name': 'google', 'default_trigger_name': 'swoyboy', 'default_player_name': 'mplayer', 'ttss': [{'name': 'tts1', 'parameters': {}}], 'stts': [{'name': 'stt1', 'parameters': {}}], 'triggers': [{'name': 'snowboy', 'parameters': {}}], 'players': [{'name': 'player1', 'parameters': None}], 'rest_api': {'password_protected': True, 'login': 'admin', 'password': 'password', 'active': True, 'port': 5000, 'allowed_cors_origin': '*'}, 'cache_path': '/tmp/kalliope', 'resources': {'neuron_folder': None, 'stt_folder': None, 'tts_folder': None, 'trigger_folder': None, 'signal_folder': None}, 'variables': {'key1': 'val1'}, 'machine': 'pumpkins', 'kalliope_version': '0.4.5', 'options': {'name': 'Options', 'energy_threshold': 4000, 'adjust_for_ambient_noise_second': 0, 'deaf': None, 'mute': None, 'stt_timeout': 0}, 'hooks': None, 'send_anonymous_usage_stats': 0}
+304	
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_neuron_launcher.py:34
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+33	        sl = SettingLoader()
+34	        resources = Resources(neuron_folder='/var/tmp/test/resources')
+35	        sl.settings.resources = resources
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_order_listener.py:31
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+30	
+31	        resources = Resources(stt_folder="/tmp")
+32	        ol.settings = mock.MagicMock(default_stt_name="default-stt",
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_order_listener.py:50
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+49	                                                                                     'audio_file_path': None},
+50	                                                                         resources_dir="/tmp")
+51	
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_resources_manager.py:114
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+113	        resources = Resources()
+114	        resources.neuron_folder = '/var/tmp/test/resources'
+115	        self.assertEqual(ResourcesManager._get_target_folder(resources, "neuron"), "/var/tmp/test/resources")
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_resources_manager.py:115
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+114	        resources.neuron_folder = '/var/tmp/test/resources'
+115	        self.assertEqual(ResourcesManager._get_target_folder(resources, "neuron"), "/var/tmp/test/resources")
+116	
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_resources_manager.py:119
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+118	        resources = Resources()
+119	        resources.stt_folder = '/var/tmp/test/resources'
+120	        self.assertEqual(ResourcesManager._get_target_folder(resources, "stt"), "/var/tmp/test/resources")
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_resources_manager.py:120
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+119	        resources.stt_folder = '/var/tmp/test/resources'
+120	        self.assertEqual(ResourcesManager._get_target_folder(resources, "stt"), "/var/tmp/test/resources")
+121	
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_resources_manager.py:124
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+123	        resources = Resources()
+124	        resources.tts_folder = '/var/tmp/test/resources'
+125	        self.assertEqual(ResourcesManager._get_target_folder(resources, "tts"), "/var/tmp/test/resources")
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_resources_manager.py:125
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+124	        resources.tts_folder = '/var/tmp/test/resources'
+125	        self.assertEqual(ResourcesManager._get_target_folder(resources, "tts"), "/var/tmp/test/resources")
+126	
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_resources_manager.py:129
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+128	        resources = Resources()
+129	        resources.trigger_folder = '/var/tmp/test/resources'
+130	        self.assertEqual(ResourcesManager._get_target_folder(resources, "trigger"), "/var/tmp/test/resources")
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_resources_manager.py:130
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+129	        resources.trigger_folder = '/var/tmp/test/resources'
+130	        self.assertEqual(ResourcesManager._get_target_folder(resources, "trigger"), "/var/tmp/test/resources")
+131	
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_resources_manager.py:134
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+133	        resources = Resources()
+134	        resources.signal_folder = '/var/tmp/test/resources'
+135	        self.assertEqual(ResourcesManager._get_target_folder(resources, "signal"), "/var/tmp/test/resources")
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_resources_manager.py:135
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+134	        resources.signal_folder = '/var/tmp/test/resources'
+135	        self.assertEqual(ResourcesManager._get_target_folder(resources, "signal"), "/var/tmp/test/resources")
+136	
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_setting_editor.py:30
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+29	        # Init the folders, otherwise it raises an exceptions
+30	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/neurons")
+31	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/stt")
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_setting_editor.py:31
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+30	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/neurons")
+31	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/stt")
+32	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/tts")
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_setting_editor.py:32
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+31	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/stt")
+32	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/tts")
+33	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/trigger")
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_setting_editor.py:33
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+32	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/tts")
+33	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/trigger")
+34	
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_setting_editor.py:39
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+38	        # Cleanup
+39	        shutil.rmtree('/tmp/kalliope/tests/kalliope_resources_dir')
+40	
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_settings_loader.py:37
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+36	            'speech_to_text': [{'google': {'language': 'fr-FR'}}],
+37	            'cache_path': '/tmp/kalliope_tts_cache',
+38	            'resource_directory': {
+39	                'stt': '/tmp/kalliope/tests/kalliope_resources_dir/stt',
+40	                'tts': '/tmp/kalliope/tests/kalliope_resources_dir/tts',
+41	                'neuron': '/tmp/kalliope/tests/kalliope_resources_dir/neurons',
+42	                'trigger': '/tmp/kalliope/tests/kalliope_resources_dir/trigger'},
+43	            'default_text_to_speech': 'pico2wave',
+44	            'default_speech_to_text': 'google',
+45	            'text_to_speech': [
+46	                {'pico2wave': {'cache': True, 'language': 'fr-FR'}},
+47	                {'googletts': {'language': 'fr', 'cache': True}}
+48	                ],
+49	            'var_files': ["../Tests/settings/variables.yml"],
+50	            'options': {'energy_threshold': 3000, 'deaf': True, 'mute': False},
+51	            'hooks': {'on_waiting_for_trigger': 'test',
+52	                      'on_stop_listening': None,
+53	                      'on_start_listening': None,
+54	                      'on_order_found': None,
+55	                      'on_start': ['on-start-synapse', 'bring-led-on'],
+56	                      'on_undeaf': [],
+57	                      'on_triggered': ['on-triggered-synapse'],
+58	                      'on_deaf': [],
+59	                      'on_mute': [],
+60	                      'on_unmute': [],
+61	                      'on_order_not_found': [
+62	                          'order-not-found-synapse'],
+63	                      'on_processed_synapses': None,
+64	                      'on_start_speaking': None,
+65	                      'on_stop_speaking': None
+66	                      },
+67	            'send_anonymous_usage_stats': 0
+68	        }
+69	
+70	        # Init the folders, otherwise it raises an exceptions
+71	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/neurons")
+72	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/stt")
+73	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/tts")
+74	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/trigger")
+75	
+76	    def tearDown(self):
+77	        # Cleanup
+78	        shutil.rmtree('/tmp/kalliope/tests/kalliope_resources_dir')
+79	
+80	        Singleton._instances = {}
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_settings_loader.py:39
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+38	            'resource_directory': {
+39	                'stt': '/tmp/kalliope/tests/kalliope_resources_dir/stt',
+40	                'tts': '/tmp/kalliope/tests/kalliope_resources_dir/tts',
+41	                'neuron': '/tmp/kalliope/tests/kalliope_resources_dir/neurons',
+42	                'trigger': '/tmp/kalliope/tests/kalliope_resources_dir/trigger'},
+43	            'default_text_to_speech': 'pico2wave',
+44	            'default_speech_to_text': 'google',
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_settings_loader.py:40
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+39	                'stt': '/tmp/kalliope/tests/kalliope_resources_dir/stt',
+40	                'tts': '/tmp/kalliope/tests/kalliope_resources_dir/tts',
+41	                'neuron': '/tmp/kalliope/tests/kalliope_resources_dir/neurons',
+42	                'trigger': '/tmp/kalliope/tests/kalliope_resources_dir/trigger'},
+43	            'default_text_to_speech': 'pico2wave',
+44	            'default_speech_to_text': 'google',
+45	            'text_to_speech': [
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_settings_loader.py:41
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+40	                'tts': '/tmp/kalliope/tests/kalliope_resources_dir/tts',
+41	                'neuron': '/tmp/kalliope/tests/kalliope_resources_dir/neurons',
+42	                'trigger': '/tmp/kalliope/tests/kalliope_resources_dir/trigger'},
+43	            'default_text_to_speech': 'pico2wave',
+44	            'default_speech_to_text': 'google',
+45	            'text_to_speech': [
+46	                {'pico2wave': {'cache': True, 'language': 'fr-FR'}},
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_settings_loader.py:42
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+41	                'neuron': '/tmp/kalliope/tests/kalliope_resources_dir/neurons',
+42	                'trigger': '/tmp/kalliope/tests/kalliope_resources_dir/trigger'},
+43	            'default_text_to_speech': 'pico2wave',
+44	            'default_speech_to_text': 'google',
+45	            'text_to_speech': [
+46	                {'pico2wave': {'cache': True, 'language': 'fr-FR'}},
+47	                {'googletts': {'language': 'fr', 'cache': True}}
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_settings_loader.py:71
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+70	        # Init the folders, otherwise it raises an exceptions
+71	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/neurons")
+72	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/stt")
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_settings_loader.py:72
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+71	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/neurons")
+72	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/stt")
+73	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/tts")
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_settings_loader.py:73
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+72	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/stt")
+73	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/tts")
+74	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/trigger")
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_settings_loader.py:74
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+73	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/tts")
+74	        os.makedirs("/tmp/kalliope/tests/kalliope_resources_dir/trigger")
+75	
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_settings_loader.py:78
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+77	        # Cleanup
+78	        shutil.rmtree('/tmp/kalliope/tests/kalliope_resources_dir')
+79	
+
+--------------------------------------------------
+>> Issue: [B106:hardcoded_password_funcarg] Possible hardcoded password: 'secret'
+   Severity: Low   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_settings_loader.py:111
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b106_hardcoded_password_funcarg.html
+110	        settings_object.players = [player1, player2]
+111	        settings_object.rest_api = RestAPI(password_protected=True, active=True,
+112	                                           login="admin", password="secret", port=5000,
+113	                                           allowed_cors_origin=False)
+114	        settings_object.cache_path = '/tmp/kalliope_tts_cache'
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_settings_loader.py:114
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+113	                                           allowed_cors_origin=False)
+114	        settings_object.cache_path = '/tmp/kalliope_tts_cache'
+115	        resources = Resources(neuron_folder="/tmp/kalliope/tests/kalliope_resources_dir/neurons",
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_settings_loader.py:115
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+114	        settings_object.cache_path = '/tmp/kalliope_tts_cache'
+115	        resources = Resources(neuron_folder="/tmp/kalliope/tests/kalliope_resources_dir/neurons",
+116	                              stt_folder="/tmp/kalliope/tests/kalliope_resources_dir/stt",
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_settings_loader.py:116
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+115	        resources = Resources(neuron_folder="/tmp/kalliope/tests/kalliope_resources_dir/neurons",
+116	                              stt_folder="/tmp/kalliope/tests/kalliope_resources_dir/stt",
+117	                              tts_folder="/tmp/kalliope/tests/kalliope_resources_dir/tts",
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_settings_loader.py:117
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+116	                              stt_folder="/tmp/kalliope/tests/kalliope_resources_dir/stt",
+117	                              tts_folder="/tmp/kalliope/tests/kalliope_resources_dir/tts",
+118	                              trigger_folder="/tmp/kalliope/tests/kalliope_resources_dir/trigger")
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_settings_loader.py:118
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+117	                              tts_folder="/tmp/kalliope/tests/kalliope_resources_dir/tts",
+118	                              trigger_folder="/tmp/kalliope/tests/kalliope_resources_dir/trigger")
+119	        settings_object.resources = resources
+
+--------------------------------------------------
+>> Issue: [B106:hardcoded_password_funcarg] Possible hardcoded password: 'secret'
+   Severity: Low   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_settings_loader.py:191
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b106_hardcoded_password_funcarg.html
+190	    def test_get_rest_api(self):
+191	        expected_rest_api = RestAPI(password_protected=True, active=True,
+192	                                    login="admin", password="secret", port=5000,
+193	                                    allowed_cors_origin=False)
+194	
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_settings_loader.py:199
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+198	    def test_get_cache_path(self):
+199	        expected_cache_path = '/tmp/kalliope_tts_cache'
+200	        sl = SettingLoader(file_path=self.settings_file_to_test)
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_settings_loader.py:205
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+204	
+205	        resources = Resources(neuron_folder="/tmp/kalliope/tests/kalliope_resources_dir/neurons",
+206	                              stt_folder="/tmp/kalliope/tests/kalliope_resources_dir/stt",
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_settings_loader.py:206
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+205	        resources = Resources(neuron_folder="/tmp/kalliope/tests/kalliope_resources_dir/neurons",
+206	                              stt_folder="/tmp/kalliope/tests/kalliope_resources_dir/stt",
+207	                              tts_folder="/tmp/kalliope/tests/kalliope_resources_dir/tts",
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_settings_loader.py:207
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+206	                              stt_folder="/tmp/kalliope/tests/kalliope_resources_dir/stt",
+207	                              tts_folder="/tmp/kalliope/tests/kalliope_resources_dir/tts",
+208	                              trigger_folder="/tmp/kalliope/tests/kalliope_resources_dir/trigger")
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_settings_loader.py:208
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+207	                              tts_folder="/tmp/kalliope/tests/kalliope_resources_dir/tts",
+208	                              trigger_folder="/tmp/kalliope/tests/kalliope_resources_dir/trigger")
+209	        expected_resource = resources
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_tts_module.py:38
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+37	        self.TTSMod.words = "kalliope"
+38	        settings = Settings(cache_path="/tmp/kalliope/tests")
+39	        self.TTSMod.settings = settings
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_tts_module.py:41
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+40	
+41	        expected_result = "/tmp/kalliope/tests/TTSModule/tests/default/5c186d1e123be2667fb5fd54640e4fd0.tts"
+42	
+43	        self.assertEqual(self.TTSMod._get_path_to_store_audio(),
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_tts_module.py:57
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+56	        with mock.patch.object(TTSModule, 'play_audio', new=new_play_audio):
+57	            settings = Settings(cache_path="/tmp/kalliope/tests")
+58	            self.TTSMod.settings = settings
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_tts_module.py:81
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+80	            # create tmp file
+81	            tmp_base_path = "/tmp/kalliope/tests/TTSModule/tests/default/"
+82	            file_path = os.path.join(tmp_base_path, "5c186d1e123be2667fb5fd54640e4fd0.tts")
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_tts_module.py:102
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+101	
+102	        base_cache_path = "/tmp/kalliope/tests/TTSModule/tests/default/"
+103	        md5_word = "5c186d1e123be2667fb5fd54640e4fd0"
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_utils.py:56
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+55	        # Test the absolute path
+56	        dir_path = "/tmp/kalliope/tests/"
+57	        file_name = "test_real_file_path"
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_utils.py:132
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+131	        sl = SettingLoader()
+132	        sl.settings.resource_dir = '/var/tmp/test/resources'
+133	
+134	        neuron = Neuron(name='Say', parameters={'message': 'test dynamic class instantiate'})
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/Tests/test_utils.py:138
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+137	                                                                         parameters=neuron.parameters,
+138	                                                                         resources_dir='/var/tmp/test/resources'),
+139	                                   Say),
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/kalliope/core/NeuronModule.py:148
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+147	            logger.debug("[NeuronModule] message is list")
+148	            tts_message = random.choice(message)
+149	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/kalliope/core/NeuronModule.py:207
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+206	            # then we pick randomly one template
+207	            list_say_template = random.choice(list_say_template)
+208	        t = Template(list_say_template)
+
+--------------------------------------------------
+>> Issue: [B404:blacklist] Consider possible security implications associated with subprocess module.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/kalliope/core/PlayerModule.py:4
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b404-import-subprocess
+3	import os
+4	import subprocess
+5	
+6	from kalliope.core.Utils.FileManager import FileManager
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/kalliope/core/PlayerModule.py:36
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b607_start_process_with_partial_path.html
+35	        # Convert mp3 to wave
+36	        subprocess.call(['ffmpeg', '-y', '-i', file_path_mp3, tmp_file_wav],
+37	                        stdout=fnull, stderr=fnull)
+38	        # remove the original file
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/kalliope/core/PlayerModule.py:36
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b603_subprocess_without_shell_equals_true.html
+35	        # Convert mp3 to wave
+36	        subprocess.call(['ffmpeg', '-y', '-i', file_path_mp3, tmp_file_wav],
+37	                        stdout=fnull, stderr=fnull)
+38	        # remove the original file
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/kalliope/core/RestAPI/FlaskAPI.py:20
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+19	
+20	UPLOAD_FOLDER = '/tmp/kalliope/tmp_uploaded_audio'
+21	ALLOWED_EXTENSIONS = {'wav'}
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/kalliope/core/RestAPI/views/settings_views.py:14
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+13	
+14	UPLOAD_FOLDER = '/tmp/kalliope/tmp_uploaded_audio'
+15	ALLOWED_EXTENSIONS = {'wav'}
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/kalliope/core/RestAPI/views/synapses_views.py:25
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+24	
+25	UPLOAD_FOLDER = '/tmp/kalliope/tmp_uploaded_audio'
+26	ALLOWED_EXTENSIONS = {'wav'}
+
+--------------------------------------------------
+>> Issue: [B605:start_process_with_a_shell] Starting a process with a shell, possible injection detected, security issue.
+   Severity: High   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/kalliope/core/RestAPI/views/synapses_views.py:378
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b605_start_process_with_a_shell.html
+377	            audio_file_path = base + ".wav"
+378	            os.system("ffmpeg -loglevel panic -y -i " + current_file_path + " " + audio_file_path)  # --> deprecated
+379	            # subprocess.call(['avconv', '-y', '-i', audio_path, new_file_path], shell=True) # Not working ...
+
+--------------------------------------------------
+>> Issue: [B303:blacklist] Use of insecure MD2, MD4, MD5, or SHA1 hash function.
+   Severity: Medium   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/kalliope/core/TTS/TTSModule.py:141
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b303-md5
+140	            words = words.encode('utf-8')
+141	        return hashlib.md5(words).hexdigest()
+142	
+
+--------------------------------------------------
+>> Issue: [B322:blacklist] The input method in Python 2 will read from standard input, evaluate and run the resulting string as python source code. This is similar, though in many ways worse, then using eval. On Python 2, use raw_input instead, input is safe in Python 3.
+   Severity: High   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/kalliope/core/Utils/Utils.py:224
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b322-input
+223	            Utils.print_warning(question + prompt)
+224	            choice = input().lower()
+225	            if default is not None and choice == '':
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/kalliope/neurons/ansible_playbook/tests/test_ansible_playbook.py:17
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+16	        self.random = "random"
+17	        self.test_file = "/tmp/kalliope_text_ansible_playbook.txt"
+18	        if "/tests" in os.getcwd():
+
+--------------------------------------------------
+>> Issue: [B404:blacklist] Consider possible security implications associated with subprocess module.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/kalliope/neurons/script/script.py:1
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b404-import-subprocess
+1	import subprocess
+2	import os
+3	import threading
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/kalliope/neurons/script/script.py:22
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b603_subprocess_without_shell_equals_true.html
+21	        p = subprocess.Popen(self.path,
+22	                             shell=False,
+23	                             stdout=subprocess.PIPE,
+24	                             stderr=subprocess.PIPE)
+25	
+26	        self.stdout, self.stderr = p.communicate()
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/kalliope/neurons/script/script.py:40
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b603_subprocess_without_shell_equals_true.html
+39	            if not self.async_mode:
+40	                p = subprocess.Popen(self.path, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=False)
+41	                (output, err) = p.communicate()
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/kalliope/neurons/script/tests/test_script.py:15
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+14	        self.random = "random"
+15	        self.test_file = "/tmp/kalliope_text_shell.txt"
+16	
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/kalliope/neurons/script/tests/test_script.py:37
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+36	        # random path
+37	        self.path = "/tmp/iamarandompath/anotherrandompath/kalliope"
+38	        parameters = {
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/kalliope/neurons/script/tests/test_script.py:45
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+44	        # Create the file and remove permissions to the user
+45	        tmp_path = "/tmp/kalliope/tests/"
+46	        tmp_file_path = tmp_path+"neuronScript"
+
+--------------------------------------------------
+>> Issue: [B404:blacklist] Consider possible security implications associated with subprocess module.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/kalliope/neurons/shell/shell.py:2
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b404-import-subprocess
+1	import logging
+2	import subprocess
+3	import threading
+
+--------------------------------------------------
+>> Issue: [B602:subprocess_popen_with_shell_equals_true] subprocess call with shell=True identified, security issue.
+   Severity: High   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/kalliope/neurons/shell/shell.py:24
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b602_subprocess_popen_with_shell_equals_true.html
+23	        p = subprocess.Popen(self.cmd,
+24	                             shell=True,
+25	                             stdout=subprocess.PIPE,
+26	                             stderr=subprocess.PIPE)
+27	
+28	        self.stdout, self.stderr = p.communicate()
+
+--------------------------------------------------
+>> Issue: [B602:subprocess_popen_with_shell_equals_true] subprocess call with shell=True identified, security issue.
+   Severity: High   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/kalliope/neurons/shell/shell.py:51
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b602_subprocess_popen_with_shell_equals_true.html
+50	            if not self.async_mode:
+51	                p = subprocess.Popen(self.cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+52	                (output, err) = p.communicate()
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/kalliope/neurons/shell/tests/test_shell.py:17
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b108_hardcoded_tmp_directory.html
+16	        self.random = "random"
+17	        self.test_file = "/tmp/kalliope_text_shell.txt"
+18	
+
+--------------------------------------------------
+>> Issue: [B404:blacklist] Consider possible security implications associated with subprocess module.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/kalliope/players/mplayer/mplayer.py:3
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b404-import-subprocess
+2	import os
+3	import subprocess
+4	
+5	logging.basicConfig()
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/kalliope/players/mplayer/mplayer.py:48
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b603_subprocess_without_shell_equals_true.html
+47	
+48	        subprocess.call(mplayer_command, stdout=fnull, stderr=fnull)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/kalliope/trigger/snowboy/snowboydecoder.py:85
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+84	        if len(sensitivity) != 0:
+85	            assert self.num_hotwords == len(sensitivity), \
+86	                "number of hotwords in decoder_model (%d) and sensitivity " \
+87	                "(%d) does not match" % (self.num_hotwords, len(sensitivity))
+88	        sensitivity_str = ",".join([str(t) for t in sensitivity])
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/kalliope/trigger/snowboy/snowboydecoder.py:147
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+146	
+147	        assert self.num_hotwords == len(self.detected_callback), \
+148	            "Error: hotwords in your models (%d) do not match the number of " \
+149	            "callbacks (%d)" % (self.num_hotwords, len(self.detected_callback))
+150	
+151	        logger.debug("detecting...")
+
+--------------------------------------------------
+>> Issue: [B404:blacklist] Consider possible security implications associated with subprocess module.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/kalliope/tts/espeak/espeak.py:4
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b404-import-subprocess
+3	import sys
+4	import subprocess
+5	
+6	logging.basicConfig()
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/kalliope/tts/espeak/espeak.py:58
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b603_subprocess_without_shell_equals_true.html
+57	        # generate the file with eSpeak
+58	        subprocess.call(final_command, stderr=sys.stderr)
+
+--------------------------------------------------
+>> Issue: [B404:blacklist] Consider possible security implications associated with subprocess module.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/kalliope/tts/pico2wave/pico2wave.py:2
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b404-import-subprocess
+1	import os
+2	import subprocess
+3	
+4	from kalliope.core.TTS.TTSModule import TTSModule, MissingTTSParameter
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   Location: /Users/soneyabintahossain/cps_project_test/kalliope/kalliope/tts/pico2wave/pico2wave.py:67
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b603_subprocess_without_shell_equals_true.html
+66	        # generate the file with pico2wav
+67	        subprocess.call(final_command)
+68	        
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 13334
+	Total lines skipped (#nosec): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0.0
+		Low: 22.0
+		Medium: 73.0
+		High: 4.0
+	Total issues (by confidence):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 77.0
+		High: 22.0
+Files skipped (0):

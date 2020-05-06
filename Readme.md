@@ -1,5 +1,5 @@
 
-We tested 21 CPS Python Project using Bandit static tool that finds common security issues in Pyhthon code. We tested below projects:
+We tested 21 CPS Python Projects using Bandit static tool that finds common security issues in Pyhthon code. We tested below projects:
 
 1. Self-driving-car steering model: cg23, chauffeur, rambo, autum  
 GitHub Link: https://udacity.com/self-driving-car   
